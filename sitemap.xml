@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/materials/introduction-to-r-and-rstudio.html</loc>
-    <lastmod>2026-03-26T11:26:38.053Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/materials/reproducible-reports-with-quarto.html</loc>
-    <lastmod>2026-03-26T11:26:38.053Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/LICENSE.html</loc>
-    <lastmod>2026-03-26T11:26:37.995Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/index.html</loc>
-    <lastmod>2026-03-26T11:26:38.008Z</lastmod>
-  </url>
-  <url>
     <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/schedule.html</loc>
-    <lastmod>2026-03-26T11:26:38.053Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/prerequisites.html</loc>
-    <lastmod>2026-03-26T11:26:38.053Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/materials/data-manipulation.html</loc>
-    <lastmod>2026-03-26T11:26:38.009Z</lastmod>
+    <lastmod>2026-03-26T11:31:14.746Z</lastmod>
   </url>
   <url>
     <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/materials/principles-of-reproducibility.html</loc>
-    <lastmod>2026-03-26T11:26:38.053Z</lastmod>
+    <lastmod>2026-03-26T11:31:14.745Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/materials/reproducible-reports-with-quarto.html</loc>
+    <lastmod>2026-03-26T11:31:14.746Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/LICENSE.html</loc>
+    <lastmod>2026-03-26T11:31:14.679Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/index.html</loc>
+    <lastmod>2026-03-26T11:31:14.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/materials/data-manipulation.html</loc>
+    <lastmod>2026-03-26T11:31:14.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/materials/introduction-to-r-and-rstudio.html</loc>
+    <lastmod>2026-03-26T11:31:14.745Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/prerequisites.html</loc>
+    <lastmod>2026-03-26T11:31:14.746Z</lastmod>
   </url>
 </urlset>
