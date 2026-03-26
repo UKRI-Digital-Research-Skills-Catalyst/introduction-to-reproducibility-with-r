@@ -41,9 +41,9 @@ library(tidyverse)
 
 There are several ways you can *recap* the demo at a later date:
 
-🖼️ Refer to this infographic [Larger
-format](https://www-users.york.ac.uk/~er13/RStudio%20Anatomy.svg)
-![infographic](https://www-users.york.ac.uk/~er13/RStudio%20Anatomy.svg){width="600"}
+🖼️ Refer to this infographic \[Full size RStudio
+Anatomy\]\]https://docs.google.com/presentation/d/1cVky1y7dWmGhpZKnCagJlmNgwGmwXFf8IWm4lCUitrk/edit?usp=sharingA)
+![infographic](images/RStudio%20Anatomy.svg){width="600"}
 
 📖 Read [First Steps in
 RStudio](https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html)
