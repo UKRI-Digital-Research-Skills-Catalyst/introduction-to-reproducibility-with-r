@@ -558,7 +558,8 @@ ggplot(data = cats, aes(x = coat, y = mass)) +
 -   Script – Where you write and save your code (.R or .qmd files)
 -   Console – Where commands are executed and immediate output appears
 -   Environment – Lists your objects and data
--   Files / Plots / Help – Where you can manage files, view plots, read help docs
+-   Files / Plots / Help – Where you can manage files, view plots, read
+    help docs
 
 ## 🧠 Core ideas
 
@@ -567,10 +568,11 @@ ggplot(data = cats, aes(x = coat, y = mass)) +
 -   Dataframes – Table-like structures that are most widely used:
     `data.frame(name = c("A", "B"))`
 -   Functions – Commands that perform actions: `mean(x)`, `ggplot()`
--   Data import functions  read data from files to dataframes for analysis
+-   Data import functions read data from files to dataframes for
+    analysis
 -   Packages like **`tidyverse`** are loaded with `library()`
--   Always use RStudio Projects and paths relative to the project folder so
-    your code is reproducible and portable
+-   Always use RStudio Projects and paths relative to the project folder
+    so your code is reproducible and portable
 
 ## 📊 Plotting with **`ggplot2`**
 
@@ -580,7 +582,7 @@ ggplot(data = cats, aes(x = coat, y = mass)) +
 -   Scales – Adjust axes with `scale_*_continuous()` or
     `scale_*_discrete()`
 
-Pages made with R [@R-core], Quarto [@Allaire_Quarto_2024], `knitr`
+Pages made with R [@R-core], Quarto [@Allaire_Quarto_2026], `knitr`
 [@knitr1; @knitr2; @knitr3], `kableExtra` [@kableExtra]
 
 # References
