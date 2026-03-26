@@ -1,0 +1,122 @@
+### The goal
+
+```{r}
+#| echo: false
+
+# import
+cats <- read_csv("data-raw/cat-coats.csv")
+
+# sumarise
+cats_summary <- cats |> 
+  group_by(coat) |> 
+  summarise(mean = mean(mass),
+            sd = sd(mass),
+            n = length(mass),
+            se = sd / sqrt(n))
+
+# plot
+ggplot() +
+  geom_point(data = cats, aes(x = coat, y = mass),
+             position = position_jitter(width = 0.1, height = 0),
+             colour = "gray50") +
+  geom_errorbar(data = cats_summary, 
+                aes(x = coat, ymin = mean - se, ymax = mean + se),
+                width = 0.3) +
+  geom_errorbar(data = cats_summary, 
+                aes(x = coat, ymin = mean, ymax = mean),
+                width = 0.2) +
+  scale_y_continuous(name = "Mass (g)", 
+                     limits = c(0, 10), 
+                     expand = c(0, 0)) +
+  scale_x_discrete(name = "Coat colour") +
+  theme_classic()
+
+```
+
+
+## Summarising data
+
+The variable `mass` in the `cats` dataframe is continuous. The most appropriate way to summarise a variable like `mass` is to find the 
+mean, standard deviation and standard error.
+
+
+`|>` is the pipe and can be produced with Ctrl+Shift+M
+
+
+
+
+
+
+🎬 We can find the mean mass with:
+
+```{r}
+cats |> 
+  summarise(mean = mean(mass))
+```
+
+We can add any sort of summary by placing it inside the the summarise
+parentheses. Each one is separated by a comma. We did this to find the
+median and the interquatrile range for fly bristles.
+
+🎬 For example, another way to calculate the number
+of values is to use the `length()` function:
+
+```{r}
+cats |> 
+  summarise(mean = mean(mass),
+            n = length(mass))
+```
+
+🛝  Adapt the code to calculate the mean, the sample
+size *and* the standard deviation (`sd()`)
+
+```{r}
+#| code-fold: true
+#| code-summary: "Answer - don't look until you have tried!"
+
+cats |> 
+  summarise(mean = mean(mass),
+            n = length(mass),
+            standard_dev = sd(mass))
+```
+
+A single continuous variable can be plotted using a histogram to show
+the shape of the distribution.
+
+🎬 Plot a histogram of cats mass:
+
+```{r}
+ggplot(cats, aes(x = mass)) +
+  geom_histogram(bins = 15, colour = "black") 
+```
+
+Notice that there are no gaps between the bars which reflects that
+`mass` is continuous. `bins` determines how many groups the variable is
+divided up into (*i.e.*, the number of bars) and `colour` sets the colour
+for the outline of the bars. A sample of 62 is a relatively small number
+of values for plotting a distribution and the number of bins used
+determines how smooth or normally distributed the values look.
+
+
+we will find summary
+statistics about mass for each of the coat types.
+
+
+🎬 The `group_by()` function is used before the
+summarise() to do calculations for each of the coats:
+
+```{r}
+cats |> 
+  group_by(coat) |> 
+  summarise(mean = mean(mass),
+                  standard_dev = sd(mass))
+```
+
+You can read this as:
+
+> take cats *and then* group by coat *and then* summarise by finding the
+> mean of mass and the standard deviation of mass
+
+🛝 Why do we get an `NA` for the standard deviation
+of the calico cats?
+

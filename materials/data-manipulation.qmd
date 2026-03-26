@@ -1,0 +1,219 @@
+---
+title: "Data manipulation"
+toc: true
+toc-location: right
+---
+
+```{r}
+#| echo: false
+library(tidyverse)
+cats <- read_csv("data-raw/cat-coats.csv")
+```
+
+
+# Introduction
+
+-   Summarising data
+    -   Whole column
+    -   By groups in another column
+-   Filtering rows
+-   Adding columns
+-   Writing data to a file
+
+# Summarising
+
+## Whole column
+
+We can use `summarise()` to get summary statistics for a whole column.
+
+🎬 Find the mean with:
+
+```{r}
+cats |> 
+  summarise(mean(mass))
+```
+
+The result is a dataframe (not a vector). This is one of the very useful features of `dplyr` and the tidyverse. Dataframes are the main data structure in R, and most functions in the tidyverse return dataframes. This makes it easy to chain together multiple operations using the pipe operator (`|>`).
+
+By default the name of the column is the function name. This is not very informative, so we can give it a more meaningful name.
+
+### Naming the column
+
+To name the column, we can use the `name =` argument in the `summarise()` function. 
+
+🎬 Give a name to the new column containing the mean:
+
+```{r}
+cats |> 
+  summarise(mean = mean(mass))
+```
+
+Another useful feature of dataframe outputs is that it is easy to add more columns.
+
+### Adding other summary stats
+
+To add additional summary statistics, we can just add more arguments to the `summarise()` function. These are separated by commas.
+
+🎬 Find the mean, standard deviation and sample size:
+
+```{r}
+cats |>
+  summarise(mean = mean(mass),
+            sd = sd(mass),
+            n = length(mass))
+```
+
+There is no function in R for the standard error of the mean, but we can calculate it from the standard deviation and sample size. The formula is:
+
+
+
+🛝 Add a column for the standard error which is
+given by $\frac{s.d.}{\sqrt{n}}$. The function for the square root is `sqrt()`.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Answer - don't look until you have tried!"
+
+cats |> 
+  summarise(mean = mean(mass),
+            sd = sd(mass),
+            n = length(mass),
+            se = sd / sqrt(n))
+```
+
+So far we have only summarised the whole column. We can also summarise by groups in another column. 
+
+## By groups given in another column
+
+The pipe operator (`|>`) is a great way to chain together multiple operations. We can use it to group the data by a column and then summarise it.
+
+🎬 Find the mean, standard deviation, sample size and standard error for each coat colour:
+
+```{r}
+cats |> 
+  group_by(coat) |> 
+  summarise(mean = mean(mass),
+            sd = sd(mass),
+            n = length(mass),
+            se = sd / sqrt(n))
+```
+
+## Save the results with assignment
+
+We can save the results of the summarise operation to a new dataframe using the assignment operator (`<-`). This is useful if we want to use the results later.
+
+🎬 Assign the summarised data to a new dataframe called `cats_summary`:
+
+```{r}
+cats_summary <- cats |> 
+  group_by(coat) |> 
+  summarise(mean = mean(mass),
+            sd = sd(mass),
+            n = length(mass),
+            se = sd / sqrt(n))
+```
+# Filtering rows
+
+We often want to work with a subset of the rows in our data. This might be to focus on one group or to remove data through quality control.
+The `filter()` function is used to filter rows in a dataframe. It takes a logical expression as an argument and returns only the rows that match the expression.
+
+## Filter to only the black cats
+
+🎬 Filter to only the black cats
+```{r}
+cats_black <- cats |> 
+  filter(coat == "black")
+```
+
+🎬 Or only the not black cats:
+```{r}
+cats |> 
+  filter(coat != "black")
+```
+
+`!` is the NOT operator. It negates whatever comes next. So `coat != "black"` returns all rows where the coat is not black.
+
+## Piping is great
+
+We can use the pipe operator to chain together multiple operations. For example, we can filter the data and then summarise it in one step. This means we don't have to create a new dataframe for the filtered data. For exploratory analysis, this is often the best approach to avoid clutter.
+
+🎬 Summarise the black cats:
+
+```{r}
+cats |> 
+  filter(coat == "black") |> 
+  summarise(mean = mean(mass),
+            n = length(mass))
+```
+
+## Filtering on more than one condition
+
+```{r}
+cats |> 
+  filter(mass > 6,
+         coat == "ginger")
+```
+
+
+## filter the raw data to remove calico
+
+```{r}
+cats |> 
+  filter(coat != "calico")
+```
+
+```{r}
+cats_summary |> 
+  filter(coat != "calico")
+```
+
+```{r}
+cats_summary |> 
+  filter(!is.na(sd))
+```
+
+
+```{r}
+cats_summary |> 
+  drop_na(sd)
+```
+
+## Adding columns
+
+```{r}
+cats <- cats |> 
+  mutate(mass_g = mass * 1000)
+```
+
+
+```{r}
+cats <- cats |> 
+  mutate(is_ginger_chonk = mass > 6 & coat == "ginger")
+```
+
+```{r}
+cats <- cats |> 
+  mutate(size = case_when(mass < 3.5 ~ "small",
+                          mass > 5 ~ "large",
+                          .default = "medium"  ))
+```
+
+
+```{r}
+cats <- cats |> 
+  mutate(size2 = case_when(
+    mass < 3.5 ~ "small",
+    mass >= 3.5 & mass <= 5 ~ "medium",
+    mass > 5 ~ "large"))
+```
+# Writing data to a file
+
+
+```{r}
+write_csv(cats, "cats-added.csv")
+```
+
+Pages made with R [@R-core], Quarto [@Allaire_Quarto_2024], `knitr` 
+[@knitr1; @knitr2; @knitr3], `kableExtra` [@kableExtra]
+
+# References

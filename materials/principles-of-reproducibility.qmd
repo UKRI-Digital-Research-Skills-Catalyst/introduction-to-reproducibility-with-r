@@ -1,0 +1,133 @@
+---
+title: "Introduction and Principles of reproducibility"
+toc: true
+toc-location: right
+---
+
+
+# Introduction
+
+## Programme Overview
+
+### What this training is and is not
+
+Chosen topics are: foundational, widely applicable, and transferable
+conceptually.
+
+It is
+
+-   ✅ An introduction to R for those without previous experience
+-   ✅ About using RStudio Projects and good practice for code and
+    project documentation and organisation
+-   ✅ An introduction to the tidyverse
+
+It is not
+
+-   ❌ An introduction to statistics
+-   ❌ Magic
+
+### Learning Objectives
+
+After this workshop the successful learner will be able to:
+
+-   Explain the rationale for scripting analysis
+-   Find their way around the RStudio windows
+-   Create and plot data using ggplot
+-   Know how to load packages
+-   Understand what is meant by the working directory, absolute and
+    relative paths and be able to apply these concepts to data import
+-   Summarise data in a single group or in multiple groups
+-   Develop highly organised analyses including well-commented scripts
+    that can be understood by future you and others
+
+# Principles of reproducibility
+
+## What is reproducibility?
+
+[![The Turing Way's definitions of reproducible
+research](images/reproducible-matrix.jpg){fig-alt="Two by Two cell matrix. Columns are Data, either same or different. Rows are Analysis either same or different. Each of cells contain one of the definitions for reproducibility"}](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions#rr-overview-definitions)
+
+**Reproducible: Same data + same analysis = identical results**
+
+*"...obtaining consistent results using the same input data;
+computational steps, methods, and code; and conditions of analysis. This
+definition is synonymous with"computational reproducibility"*
+[@nationalacademiesofsciences2019]. This is what we are concentrating on
+in the Supporting Information.
+
+-   Replicable: Different data + same analysis = qualitatively similar
+    results. The work is not dependent on the specificities of the data.
+
+-   Robust: Same data + different analysis = qualitatively similar or
+    identical results. The work is not dependent on the specificities of
+    the analysis.
+
+-   Generalisable: Different data + different analysis = qualitatively
+    similar results and same conclusions.
+
+## Why does reproducibility matter?
+
+-   Many high profile cases of work which did not reproduce e.g. Anil
+    Potti unravelled by @baggerly2009
+
+-   Five selfish reasons to work reproducibly [@markowetz2015].
+    Alternatively, see the very entertaining
+    [talk](https://youtu.be/yVT07Sukv9Q)
+
+-   **Will** become standard in Science and publishing e.g OECD Global
+    Science Forum Building digital workforce capacity and skills for
+    data-intensive science [@oecdglobalscienceforum2020]
+
+## How to achieve reproducibility
+
+-   Reproducibility is a continuum. Some is better than none!
+
+-   Script **everything**
+
+-   Organisation: Project-oriented workflows with file and folder
+    structure, naming things
+
+-   Code: follow a consistent style, organise into sections and scripts
+    (be modular), Code algorithmically
+
+-   Documentation: Readme files, code comments, metadata,
+
+-   More advanced: version, control, continuous integration and testing
+
+## Rationale for scripting
+
+-   Science is the generation of ideas, designing work to test them and
+    reporting the results.
+
+-   We ensure laboratory and field work is replicable, robust and
+    generalisable by planning and recording in lab books and using
+    standard protocols. Repeating results is still hard.
+
+-   Workflows for computational projects, and the data analysis and
+    reporting of other work can, and should, be 100% reproducible!
+
+-   Scripting is the way to achieve this.
+
+## Project-oriented workflow
+
+-   use folders to organise your work
+
+-   you are aiming for structured, systematic and repeatable.
+
+-   inputs and outputs should be clearly identifiable from structure
+    and/or naming
+
+## Further reading
+
+-   Data Organization in Spreadsheets [@broman_data_2018]
+-   Ten simple rules for reproducible computational research
+    [@Sandve2013-nd]
+-   Best practices for scientific computing [@Wilson2014-ij]
+-   Good enough practices in scientific computing [@Wilson2017-cp]
+-   Excuse Me, Do You Have a Moment to Talk About Version Control?
+    [@Bryan2018-hl]
+
+Pages made with R [@R-core], Quarto [@Allaire_Quarto_2024], `knitr`
+[@knitr1; @knitr2; @knitr3], `kableExtra` [@kableExtra]
+
+# References

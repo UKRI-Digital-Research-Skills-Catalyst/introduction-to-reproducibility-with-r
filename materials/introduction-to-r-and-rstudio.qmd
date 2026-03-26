@@ -1,0 +1,586 @@
+---
+title: "Introduction to R and RStudio"
+toc: true
+toc-location: right
+---
+
+```{r}
+#| echo: false
+library(tidyverse)
+```
+
+# Introduction
+
+-   Finding your way round RStudio
+-   Typing in data and plotting it
+-   Importing data: working directories and paths
+
+# Finding your way round RStudio
+
+## RStudio: live demonstration
+
+-   the panels
+    -   Top left: Script - write and edit code and comments to keep
+    -   Bottom left: Console - where commands get executed and can be
+        typed
+    -   Top right: Environment - where you can see the objects you have
+        created; History - of commands
+    -   Bottom right: Files - a file explorer; Plots; Packages; Help\
+-   making yourself comfortable
+-   typing in the console sending commands
+-   using R as a calculator
+-   assigning values
+-   where to see objects
+-   using a script - make sure to execute
+-   comments \#
+-   data types and structures
+-   functions `c()`
+-   types of R files: `.R`, `.RData` `.RHistory`
+
+## Overview of demonstration
+
+There are several ways you can *recap* the demo at a later date:
+
+🖼️ Refer to this infographic [Larger
+format](https://www-users.york.ac.uk/~er13/RStudio%20Anatomy.svg)
+![infographic](https://www-users.york.ac.uk/~er13/RStudio%20Anatomy.svg){width="600"}
+
+📖 Read [First Steps in
+RStudio](https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html)
+
+📹 Watch
+
+{{< video https://www.youtube.com/watch?v=7oLLjkTNrjY >}}
+
+{{< video https://youtu.be/2Ke1FGdaMSI >}}
+
+# Typing in data and plotting it
+
+🎬 We code together
+
+🛝 You try!
+
+## The goal 🐈 plot
+
+We will work with some data on the coat colour of 62 cats. You are going
+to type data in R, summarise and plot it
+
+The data are as a frequency table:
+
+```{r}
+#| echo: false
+coat <- c("black", 
+          "white", 
+          "tabby", 
+          "ginger", 
+          "tortoiseshell", 
+          "calico")
+freq <- c(23, 15, 8, 10, 5, 1)
+df <- data.frame(coat, freq)
+knitr::kable(df, 
+             table.attr = "style='width:30%;'",
+             caption = "Frequency of coat colours in 62 cats",
+             format = "html",
+             col.names = c("Coat colour", "No. cats"),
+             row.names = FALSE) |>  
+  kableExtra::kable_styling()
+```
+
+You will create a figure like this:
+
+```{r}
+#| echo: false
+coat_data <- data.frame(coat, freq)
+ggplot(data = coat_data, 
+       aes(x = coat, y = freq)) +
+  geom_col(colour = "black", fill = "lightblue", width = 1) +
+  scale_x_discrete(name = "Coat colour",
+                   expand = c(0, 0)) +
+  scale_y_continuous(name = "Number of cats",
+                     expand = c(0, 0),
+                     limits = c(0, 25)) +
+  theme_classic()
+```
+
+## Getting set up
+
+-   🎬 In RStudio do File \| New project \| New directory Be purposeful
+    about where you create it and name it. I suggest `cats-1`
+
+-   🎬 Make a new script and save it as `type-data-and-plot.R` to carry
+    out the rest of the work.
+
+## Creating the data
+
+Start by making a vector called `coat` that holds coat colours
+
+🎬 Write the following in your script:
+
+```{r}
+# coat colours
+coat <- c("black", "white", "tabby", "ginger", "tortoiseshell", "calico")
+```
+
+The shortcut for `<-` is Alt+- (hold the Alt key down then hit the minus
+key ).
+
+Ensure your cursor is on the line with the command and do Control+Enter
+to send the command to the console to be executed.
+
+I have used a comment. Comment your code as much as possible!
+
+🛝 Create a vector called `freq` containing the numbers of cats with
+each coat colour
+
+```{r}
+#| code-fold: true
+#| code-summary: "Answer - don't look until you have tried!"
+
+# numbers of cats with each coat colour
+freq <- c(23, 15, 8, 10, 5, 1)
+
+```
+
+## Packages
+
+Commands like `c()` and `sum()` are in packages which are part the
+'base' R system. A package is a collection of related commands. Base
+packages are installed automatically when you install R.
+
+Other packages, such as **`ggplot2`** [@ggplot2] need to be *installed
+once*, and then *loaded each session*. **`ggplot2`** is one of the
+**`tidyverse`** [@tidyverse] packages.
+
+🎬 Load the **`tidyverse`**:
+
+```{r}
+#| eval: false
+library(tidyverse)
+```
+
+You will likely be warned of some function name conflicts but these will
+not be a problem for you.
+
+## Plotting the data with `ggplot()`
+
+-   `ggplot()` takes a dataframe for an argument
+-   We can make a dataframe of the two vectors, `coat` and `freq` using
+    the `data.frame()` function.
+
+🎬 Make a dataframe called `coat_data`
+
+```{r}
+coat_data <- data.frame(coat, freq)
+```
+
+🎬 Click on `coat_data` in the Environment to open a spreadsheet-like
+view of it.
+
+🎬 Create a simple barplot using `ggplot` like this:
+
+```{r}
+ggplot(data = coat_data, aes(x = coat, y = freq)) +
+  geom_col()
+```
+
+-   `ggplot()` alone creates a blank plot.
+-   `ggplot(data = coat_data)` looks the same.
+-   `aes()` gives the 'Aesthetic mappings'. How variables (columns) are
+    mapped to visual properties (aesthetics) e.g., axes, colour, shapes.
+-   Thus `ggplot(data = coat_data, aes(x = coat, y = freq))` produces a
+    plot with axes
+-   `geom_col`: A 'Geom' (Geometric object) gives the visual
+    representations of the data: points, lines, bars, boxplots etc.
+
+Note that `ggplot2` is the name of the package and `ggplot()` is its
+most important command.
+
+## Using the help manual
+
+The manual tells us about a function. 'Arguments' can be added to the
+`geom_col()` command inside the brackets.
+
+Commands do something and their arguments (in brackets) and can specify:
+
+-   what object to do it to
+-   how exactly to do it
+
+Many arguments have defaults so you don't always need to supply them.
+
+🎬 Open the manual page for `geom_col()` using:
+
+```{r}
+#| eval: false
+?geom_col
+```
+
+The manual page has several sections.
+
+-   **Description** an overview of what the command does
+-   **Usage** lists arguments
+    -   form: argument name = default value
+    -   some arguments MUST be supplied others have defaults
+    -   `...` means etc and includes arguments that can be passed to
+        many 'geoms'
+-   **Arguments** gives the detail about the arguments
+-   **Details** describes how the command works in more detail
+-   **Value** gives the output of the command
+-   Don't be too perturbed by not fully understanding the information
+
+## Customising a plot
+
+### Bar colour
+
+🎬 Change the fill of the bars using `fill`:
+
+```{r}
+
+ggplot(data = coat_data, aes(x = coat, y = freq)) +
+  geom_col(fill = "lightblue")
+```
+
+Colours can be given by their name, "lightblue" or code, "#ADD8E6".
+
+Look up by [name](assets/colournames.pdf) or
+[code](assets/colourhex.pdf)
+
+🎬 Change the bars to a colour you like.
+
+`fill` is one of the arguments covered by `...`. `fill` is an
+'aesthetic'. If you look for `...` in the list of arguments you will see
+it says:
+
+> Other arguments passed on to layer(). These are often aesthetics, used
+> to set an aesthetic to a fixed value, like colour = "red" or size = 3.
+> They may also be parameters to the paired geom/stat.
+
+We just set the `fill` aesthetic to a fixed value.
+
+Further down the manual, there is a section on **Aesthetics** which
+lists those understood by `geom_col()`
+
+We can set (map) the `fill` aesthetic to a fixed colour inside
+`geom_col()` *or* map it to a variable from the dataframe inside the
+`aes()` instead. This means the colour will be different for different
+values in that variable.
+
+🎬 Map the `fill` aesthetic to the `coat` variable:
+
+```{r}
+ggplot(data = coat_data, aes(x = coat, y = freq, fill = coat)) +
+  geom_col()
+```
+
+Note that we have taken `fill = "lightblue"` out of the `geom_col()` and
+instead put `fill = coat` in the `aes()`.
+
+🛝 Use the manual to put the bars next to each other. Look for the
+argument that will mean there is no space between the bars.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Answer - don't look until you have tried!"
+
+ggplot(data = coat_data, aes(x = coat, y = freq)) +
+  geom_col(fill = "lightblue", width = 1)
+```
+
+🛝 Use the manual to change the colour of the lines around each bar to
+black.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Answer - don't look until you have tried!"
+
+ggplot(data = coat_data,
+       aes(x = coat, y = freq)) +
+  geom_col(fill = "lightblue", 
+           width = 1, 
+           colour = "black")
+```
+
+### Changing the axes
+
+We can make changes to the axes using:
+
+-   Changes to a discrete x axis: `scale_x_discrete()`
+-   Changes to a continuous y axis: `scale_y_continuous()`
+
+`ggplot` automatically extends the axes slightly. You can turn this
+behaviour off with the `expand` argument in `scale_x_discrete()` and
+`scale_y_continuous()`.[^1]
+
+[^1]: There are also `scale_x_continous()` and `scale_y_discrete()`
+    functions when you have those types of variable
+
+🎬 To remove the gap between the axes and the data:
+
+```{r}
+ggplot(data = coat_data, aes(x = coat, y = freq)) +
+  geom_col(fill = "lightblue", 
+           width = 1, 
+           colour = "black") +
+  scale_x_discrete(expand = c(0, 0)) + 
+  scale_y_continuous(expand = c(0, 0)) 
+```
+
+Each 'layer' is added to the ggplot() command with a `+`
+
+::: callout-tip
+## Top Tip
+
+Make your code easier to read by using white space and new lines
+
+-   put spaces around `=` , `->` and after `,`
+-   use a newline after every comma in a command with lots of arguments
+:::
+
+🛝 Look up `scale_x_discrete` in the manual and work out how to change
+the axis title from "coat" to "Coat colour". Also change the *y*-axis
+title.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Answer - don't look until you have tried!"
+
+ggplot(data = coat_data, aes(x = coat, y = freq)) +
+  geom_col(fill = "lightblue", 
+           width = 1, 
+           colour = "black") +
+  scale_x_discrete(expand = c(0, 0),
+                   name = "Coat colour") + 
+  scale_y_continuous(expand = c(0, 0),
+                     name = "Number of cats") 
+
+
+```
+
+🎬 I would prefer to see the *y*-axis extend a little beyond the data
+and we can change the axis "limits" in the `scale_y_continuous()`
+
+```{r}
+ggplot(data = coat_data, aes(x = coat, y = freq)) +
+  geom_col(fill = "lightblue", 
+           width = 1, 
+           colour = "black") +
+  scale_x_discrete(expand = c(0, 0),
+                   name = "Coat colour") + 
+  scale_y_continuous(expand = c(0, 0),
+                     name = "Number of cats",
+                     limits = c(0, 25)) 
+
+
+```
+
+### Getting rid of the grey background
+
+The grey grid background is useful for examining plots on a screen but
+for a report or publication you will want a more scientific style. Every
+aspect of the "theme" of a plot - the non-data elements such as fonts,
+background colours, axis line colours etc - can be controlled
+individually[^2] but there are some handy built in themes that apply
+several changes at once. One of these is `theme_classic()`
+
+[^2]: [Modify components of a
+    theme](https://ggplot2.tidyverse.org/reference/theme.html)
+
+🎬 Add `theme_classic()` to the plot:
+
+```{r}
+ggplot(data = coat_data, aes(x = coat, y = freq)) +
+  geom_col(width = 1, 
+           colour = "black",
+           fill = "lightblue") +
+  scale_x_discrete(expand = c(0, 0),
+                   name = "Coat colour") + 
+  scale_y_continuous(expand = c(0, 0),
+                     name = "Number of cats",
+                     limits = c(0, 25)) +
+  theme_classic()
+
+
+```
+
+# Importing data from files
+
+Typing in data is not practical when you have a lot of it. Far more
+commonly, we import data from a file into R. This requires you know two
+pieces of information.
+
+1.  What format the data are in
+
+    The format of the data determines what *function* you will use to
+    import. The file extension often indicates format.
+
+    -   `.txt` a plain text file[^3], where the columns are often
+        separated by a space but might also be separated by a tab, a
+        backslash or forward slash, or some other character
+    -   `.csv` a plain text file where the columns are separated by
+        commas
+    -   `.xlsx` an Excel file
+
+2.  Where the file is relative to your working directory
+
+    `R` can only read in a file if you say where it is, *i.e.*, you give
+    its **relative path**.
+
+[^3]: Plain text files can be opened in notepad or other similar editor
+    and still be readable.
+
+We will first save our file for this workshop to our Project folder and
+read them in. Then we will then create a new folder inside our Project
+folder called `data-raw`, move the data file into it and read them in
+from there. This will allow you to see how the file paths need to be
+modified when a file is not in your *working directory*.
+
+## The goal
+
+```{r}
+#| echo: false
+
+# import
+cats <- read_csv("data-raw/cat-coats.csv")
+
+# plot
+ggplot(data = cats, aes(x = coat, y = mass)) +
+  geom_boxplot() +
+  scale_y_continuous(name = "Mass (g)", 
+                     limits = c(0, 10), 
+                     expand = c(0, 0)) +
+  scale_x_discrete(name = "Coat colour") +
+  theme_classic()
+
+```
+
+## Getting set up
+
+-   🎬 In RStudio do File \| New project \| New directory Be purposeful
+    about where you create it and name it. I suggest `cats-2`
+
+-   🎬 Make a new script and save it as
+    `import-data-and-summarise-plot.R`.
+
+-   🎬 Save this file to your `cats-2` folder: The coat colour and mass
+    of 62 cats - [cat-coats.csv](data-raw/cat-coats.csv)
+
+## Learning about working directories and paths
+
+### Reading in data from the *Project* folder `cats-2`
+
+CSV files can be read read in with core **`tidyverse`** [@tidyverse]
+functions.
+
+🎬 Load the packages
+
+```{r}
+library(tidyverse)
+```
+
+A `.csv.` extension suggests this is plain text file with comma
+separated columns. However, before we attempt to read it it, we should
+take a look at it. We can do this from RStudio
+
+🎬 Go to the Files pane (bottom right), click on the `cat-coats.csv`
+file and choose View File[^4]
+
+[^4]: **Do not** be tempted to import data this way. Unless you are
+    careful, your data import will not be scripted or will not be
+    scripted correctly.
+
+🎬 Read in the csv file with:
+
+```{r}
+#| eval: false
+cats <- read_csv("cat-coats.csv")
+```
+
+The data from the file will be read into a dataframe called `cats` and
+you will be able to see it in the Environment.
+
+### Reading in data from a different folder
+
+To help you understand relative file paths, we will now move the data
+file.
+
+🎬 First remove the dataframes you just created to make it easier to see
+whether you can successfully read in the files from a different place:
+
+```{r}
+#| eval: false
+rm(cats)
+```
+
+🎬 Now make a new folder called `data-raw`. You can do this on the Files
+Pane by clicking New Folder and typing into the box that appears.
+
+🎬 Check the boxes next to the file names and choose More \| Move... and
+select the `data-raw` folder.
+
+The file will move. To import data from a file in the `data-raw` folder,
+you need to give the *relative path* to the file from the working
+directory. The working directory is the Project folder, `cats-2` so the
+relative path is `data-raw/cat-coats.csv`
+
+🎬 Import the `cat-coats.csv` data like this:
+
+```{r}
+cats <- read_csv("data-raw/cat-coats.csv")
+```
+
+## Creating a boxplot
+
+🎬 Create a simple barplot using `ggplot` like this:
+
+```{r}
+ggplot(data = cats, aes(x = coat, y = mass)) +
+  geom_boxplot()
+```
+
+🛝 Can you format the boxplot as shown above?
+
+```{r}
+#| code-fold: true
+#| code-summary: "Answer - don't look until you have tried!"
+
+ggplot(data = cats, aes(x = coat, y = mass)) +
+  geom_boxplot() +
+  scale_y_continuous(name = "Mass (g)", 
+                     limits = c(0, 10), 
+                     expand = c(0, 0)) +
+  scale_x_discrete(name = "Coat colour") +
+  theme_classic()
+```
+
+# Summary
+
+## 🔧 RStudio Interface
+
+-   Script – Where you write and save your code (.R or .qmd files)
+-   Console – Where commands are executed and immediate output appears
+-   Environment – Lists your objects and data
+-   Files / Plots / Help – Where you can manage files, view plots, read help docs
+
+## 🧠 Core ideas
+
+-   Assignment – Use `<-` to store values: `x <- 5`
+-   Vectors – One-dimensional data: `c(1, 2, 3)`
+-   Dataframes – Table-like structures that are most widely used:
+    `data.frame(name = c("A", "B"))`
+-   Functions – Commands that perform actions: `mean(x)`, `ggplot()`
+-   Data import functions  read data from files to dataframes for analysis
+-   Packages like **`tidyverse`** are loaded with `library()`
+-   Always use RStudio Projects and paths relative to the project folder so
+    your code is reproducible and portable
+
+## 📊 Plotting with **`ggplot2`**
+
+-   Structure – `ggplot(data, aes(x, y)) + geom_*()`
+-   Common geoms – `geom_col()`, `geom_boxplot()`, `geom_point()`
+-   Customize – `fill`, `color`, `width`, `theme_classic()`
+-   Scales – Adjust axes with `scale_*_continuous()` or
+    `scale_*_discrete()`
+
+Pages made with R [@R-core], Quarto [@Allaire_Quarto_2024], `knitr`
+[@knitr1; @knitr2; @knitr3], `kableExtra` [@kableExtra]
+
+# References

@@ -1,0 +1,62 @@
+---
+title: "SETAC Student Conference 2025"
+toc: true
+toc-location: right
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction to Reproducibility with R
+
+Training workshop for the SETAC 13th Young Environmental Scientists
+Meeting 2025-08-12. It is designed and delivered by Emma Rand of The
+University of York.
+
+## Overview
+
+An increase in the complexity and scale of biological data means
+biologists are increasingly required to develop the data skills needed
+to design reproducible workflows for the simulation, collection,
+organisation, processing, analysis and presentation of data. Developing
+such data skills requires at least some coding, also known as scripting.
+This makes your work (everything you do with your raw data) explicitly
+described, totally transparent and completely reproducible. However,
+learning to code can be a daunting prospect for many biologists! That’s
+where Reproducibility with R comes in!
+
+R is a free and open source language especially well-suited to data
+analysis and visualisation and has a relatively inclusive and
+newbie-friendly community. R caters to users who do not see themselves
+as programmers, but then allows them to slide gradually into
+programming.
+
+This workshop will introduce you to R and RStudio, the most widely used
+interface for working with R. You will learn how to import data,
+manipulate it, summarise it and plot it. You will learn how to use an
+organised project-oriented workflow with well commented scripts so that
+you can understand your work in the future, and share it with others. In
+addition, you will learn what a working directory and a file path are -
+these are key concepts in computing generally but ones which are often
+not taught to biologists.
+
+## Philosophy and approach
+
+It is impossible to cover everything you might ever need! Different
+people will use different methods and tools. Topics have been chosen
+because they are: foundational, widely applicable and transferable
+conceptually.
+
+## Learning outcomes
+
+After this workshop the successful learner will be able to:
+
+-   Find their way around the RStudio windows
+-   Create and plot data using ggplot
+-   Explain the rationale for scripting analysis
+-   Know how to load packages
+-   Understand what is meant by the working directory, absolute and
+    relative paths and be able to apply these concepts to data import
+-   Summarise data in a single group or in multiple groups
+-   Develop highly organised analyses including well-commented scripts
+    that can be understood by future you and others

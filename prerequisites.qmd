@@ -1,0 +1,31 @@
+---
+title: "Prerequisites"
+toc: true
+toc-location: right
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Pre-course instructions for participants
+
+You do not need any prior experience of R or RStudio.
+
+There are Windows PCs at the venue and you are **not** required to bring
+your own machine. Participants from outside of York will be provided
+with a temporary IT account. However, if you prefer to work on your own
+machine please install the following prior to attending: 
+
+-   R version 4.4.1 or higher:<https://cloud.r-project.org/>
+-   RStudio Version: 2024.12.1+563 or higher:
+    <https://posit.co/download/rstudio-desktop/>
+-   These R packages from CRAN: **`tidyverse`**,  **`devtools`**.
+    Once you have installed R and RStudio, start RStudio up and 
+    go to the Packages tab in the bottom right pane; click Install and 
+    type the name of the package you want to install in the box that 
+    appears. Then wait until you get the cursor (\>) back in the 
+    console window.
+-   TinyTeX:
+    Once you have installed R and RStudio, start RStudio up and 
+    go to the Terminal (lower left, behind the console) and type:
+    `quarto install tinytex` and press enter.
