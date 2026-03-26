@@ -1,45 +1,136 @@
 [
   {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
+    "objectID": "materials/introduction-to-r-and-rstudio.html",
+    "href": "materials/introduction-to-r-and-rstudio.html",
+    "title": "Introduction to R and RStudio",
     "section": "",
-    "text": "Introduction and Principles of reproducibility\n\nIntroduction\nPrinciples of reproducibility\n\nIntroduction to R and RStudio\n\nFinding your way round RStudio\nTyping in data and plotting it"
+    "text": "Finding your way round RStudio\nTyping in data and plotting it\nImporting data: working directories and paths"
   },
   {
-    "objectID": "schedule.html#section",
-    "href": "schedule.html#section",
-    "title": "Schedule",
-    "section": "",
-    "text": "Introduction and Principles of reproducibility\n\nIntroduction\nPrinciples of reproducibility\n\nIntroduction to R and RStudio\n\nFinding your way round RStudio\nTyping in data and plotting it"
+    "objectID": "materials/introduction-to-r-and-rstudio.html#rstudio-live-demonstration",
+    "href": "materials/introduction-to-r-and-rstudio.html#rstudio-live-demonstration",
+    "title": "Introduction to R and RStudio",
+    "section": "RStudio: live demonstration",
+    "text": "RStudio: live demonstration\n\nthe panels\n\nTop left: Script - write and edit code and comments to keep\nBottom left: Console - where commands get executed and can be typed\nTop right: Environment - where you can see the objects you have created; History - of commands\nBottom right: Files - a file explorer; Plots; Packages; Help\n\n\nmaking yourself comfortable\ntyping in the console sending commands\nusing R as a calculator\nassigning values\nwhere to see objects\nusing a script - make sure to execute\ncomments #\ndata types and structures\nfunctions c()\ntypes of R files: .R, .RData .RHistory"
   },
   {
-    "objectID": "schedule.html#break-20-mins",
-    "href": "schedule.html#break-20-mins",
-    "title": "Schedule",
-    "section": "1030 - 1050 Break 20 mins",
-    "text": "1030 - 1050 Break 20 mins"
+    "objectID": "materials/introduction-to-r-and-rstudio.html#overview-of-demonstration",
+    "href": "materials/introduction-to-r-and-rstudio.html#overview-of-demonstration",
+    "title": "Introduction to R and RStudio",
+    "section": "Overview of demonstration",
+    "text": "Overview of demonstration\nThere are several ways you can recap the demo at a later date:\n🖼️ Refer to this infographic Larger format \n📖 Read First Steps in RStudio\n📹 Watch"
   },
   {
-    "objectID": "schedule.html#section-1",
-    "href": "schedule.html#section-1",
-    "title": "Schedule",
-    "section": "1050 – 1200",
-    "text": "1050 – 1200\nIntroduction to R and RStudio continued\n\nImporting data\nWorking directories and file paths"
+    "objectID": "materials/introduction-to-r-and-rstudio.html#the-goal-plot",
+    "href": "materials/introduction-to-r-and-rstudio.html#the-goal-plot",
+    "title": "Introduction to R and RStudio",
+    "section": "The goal 🐈 plot",
+    "text": "The goal 🐈 plot\nWe will work with some data on the coat colour of 62 cats. You are going to type data in R, summarise and plot it\nThe data are as a frequency table:\n\n\n\nFrequency of coat colours in 62 cats\n\n\nCoat colour\nNo. cats\n\n\n\n\nblack\n23\n\n\nwhite\n15\n\n\ntabby\n8\n\n\nginger\n10\n\n\ntortoiseshell\n5\n\n\ncalico\n1\n\n\n\n\n\nYou will create a figure like this:"
   },
   {
-    "objectID": "schedule.html#optional-material",
-    "href": "schedule.html#optional-material",
-    "title": "Schedule",
-    "section": "Optional material",
-    "text": "Optional material\nData manipulation\n\nFiltering rows 1\nAdding columns\nSummarising\nWriting data to a file\n\nComputational Analysis for Bioscientists"
+    "objectID": "materials/introduction-to-r-and-rstudio.html#getting-set-up",
+    "href": "materials/introduction-to-r-and-rstudio.html#getting-set-up",
+    "title": "Introduction to R and RStudio",
+    "section": "Getting set up",
+    "text": "Getting set up\n\n🎬 In RStudio do File | New project | New directory Be purposeful about where you create it and name it. I suggest cats-1\n🎬 Make a new script and save it as type-data-and-plot.R to carry out the rest of the work."
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#creating-the-data",
+    "href": "materials/introduction-to-r-and-rstudio.html#creating-the-data",
+    "title": "Introduction to R and RStudio",
+    "section": "Creating the data",
+    "text": "Creating the data\nStart by making a vector called coat that holds coat colours\n🎬 Write the following in your script:\n\n# coat colours\ncoat &lt;- c(\"black\", \"white\", \"tabby\", \"ginger\", \"tortoiseshell\", \"calico\")\n\nThe shortcut for &lt;- is Alt+- (hold the Alt key down then hit the minus key ).\nEnsure your cursor is on the line with the command and do Control+Enter to send the command to the console to be executed.\nI have used a comment. Comment your code as much as possible!\n🛝 Create a vector called freq containing the numbers of cats with each coat colour\n\n\nAnswer - don’t look until you have tried!\n# numbers of cats with each coat colour\nfreq &lt;- c(23, 15, 8, 10, 5, 1)"
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#packages",
+    "href": "materials/introduction-to-r-and-rstudio.html#packages",
+    "title": "Introduction to R and RStudio",
+    "section": "Packages",
+    "text": "Packages\nCommands like c() and sum() are in packages which are part the ‘base’ R system. A package is a collection of related commands. Base packages are installed automatically when you install R.\nOther packages, such as ggplot2 (Wickham 2016) need to be installed once, and then loaded each session. ggplot2 is one of the tidyverse (Wickham et al. 2019) packages.\n🎬 Load the tidyverse:\n\nlibrary(tidyverse)\n\nYou will likely be warned of some function name conflicts but these will not be a problem for you."
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#plotting-the-data-with-ggplot",
+    "href": "materials/introduction-to-r-and-rstudio.html#plotting-the-data-with-ggplot",
+    "title": "Introduction to R and RStudio",
+    "section": "Plotting the data with ggplot()",
+    "text": "Plotting the data with ggplot()\n\nggplot() takes a dataframe for an argument\nWe can make a dataframe of the two vectors, coat and freq using the data.frame() function.\n\n🎬 Make a dataframe called coat_data\n\ncoat_data &lt;- data.frame(coat, freq)\n\n🎬 Click on coat_data in the Environment to open a spreadsheet-like view of it.\n🎬 Create a simple barplot using ggplot like this:\n\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col()\n\n\n\n\n\n\n\n\n\nggplot() alone creates a blank plot.\nggplot(data = coat_data) looks the same.\naes() gives the ‘Aesthetic mappings’. How variables (columns) are mapped to visual properties (aesthetics) e.g., axes, colour, shapes.\nThus ggplot(data = coat_data, aes(x = coat, y = freq)) produces a plot with axes\ngeom_col: A ‘Geom’ (Geometric object) gives the visual representations of the data: points, lines, bars, boxplots etc.\n\nNote that ggplot2 is the name of the package and ggplot() is its most important command."
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#using-the-help-manual",
+    "href": "materials/introduction-to-r-and-rstudio.html#using-the-help-manual",
+    "title": "Introduction to R and RStudio",
+    "section": "Using the help manual",
+    "text": "Using the help manual\nThe manual tells us about a function. ‘Arguments’ can be added to the geom_col() command inside the brackets.\nCommands do something and their arguments (in brackets) and can specify:\n\nwhat object to do it to\nhow exactly to do it\n\nMany arguments have defaults so you don’t always need to supply them.\n🎬 Open the manual page for geom_col() using:\n\n?geom_col\n\nThe manual page has several sections.\n\nDescription an overview of what the command does\nUsage lists arguments\n\nform: argument name = default value\nsome arguments MUST be supplied others have defaults\n... means etc and includes arguments that can be passed to many ‘geoms’\n\nArguments gives the detail about the arguments\nDetails describes how the command works in more detail\nValue gives the output of the command\nDon’t be too perturbed by not fully understanding the information"
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#customising-a-plot",
+    "href": "materials/introduction-to-r-and-rstudio.html#customising-a-plot",
+    "title": "Introduction to R and RStudio",
+    "section": "Customising a plot",
+    "text": "Customising a plot\n\nBar colour\n🎬 Change the fill of the bars using fill:\n\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\")\n\n\n\n\n\n\n\n\nColours can be given by their name, “lightblue” or code, “#ADD8E6”.\nLook up by name or code\n🎬 Change the bars to a colour you like.\nfill is one of the arguments covered by .... fill is an ‘aesthetic’. If you look for ... in the list of arguments you will see it says:\n\nOther arguments passed on to layer(). These are often aesthetics, used to set an aesthetic to a fixed value, like colour = “red” or size = 3. They may also be parameters to the paired geom/stat.\n\nWe just set the fill aesthetic to a fixed value.\nFurther down the manual, there is a section on Aesthetics which lists those understood by geom_col()\nWe can set (map) the fill aesthetic to a fixed colour inside geom_col() or map it to a variable from the dataframe inside the aes() instead. This means the colour will be different for different values in that variable.\n🎬 Map the fill aesthetic to the coat variable:\n\nggplot(data = coat_data, aes(x = coat, y = freq, fill = coat)) +\n  geom_col()\n\n\n\n\n\n\n\n\nNote that we have taken fill = \"lightblue\" out of the geom_col() and instead put fill = coat in the aes().\n🛝 Use the manual to put the bars next to each other. Look for the argument that will mean there is no space between the bars.\n\n\nAnswer - don’t look until you have tried!\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\", width = 1)\n\n\n\n\n\n\n\n\n\n🛝 Use the manual to change the colour of the lines around each bar to black.\n\n\nAnswer - don’t look until you have tried!\nggplot(data = coat_data,\n       aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\", \n           width = 1, \n           colour = \"black\")\n\n\n\n\n\n\n\n\n\n\n\nChanging the axes\nWe can make changes to the axes using:\n\nChanges to a discrete x axis: scale_x_discrete()\nChanges to a continuous y axis: scale_y_continuous()\n\nggplot automatically extends the axes slightly. You can turn this behaviour off with the expand argument in scale_x_discrete() and scale_y_continuous().1\n🎬 To remove the gap between the axes and the data:\n\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\", \n           width = 1, \n           colour = \"black\") +\n  scale_x_discrete(expand = c(0, 0)) + \n  scale_y_continuous(expand = c(0, 0)) \n\n\n\n\n\n\n\n\nEach ‘layer’ is added to the ggplot() command with a +\n\n\n\n\n\n\nTipTop Tip\n\n\n\nMake your code easier to read by using white space and new lines\n\nput spaces around = , -&gt; and after ,\nuse a newline after every comma in a command with lots of arguments\n\n\n\n🛝 Look up scale_x_discrete in the manual and work out how to change the axis title from “coat” to “Coat colour”. Also change the y-axis title.\n\n\nAnswer - don’t look until you have tried!\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\", \n           width = 1, \n           colour = \"black\") +\n  scale_x_discrete(expand = c(0, 0),\n                   name = \"Coat colour\") + \n  scale_y_continuous(expand = c(0, 0),\n                     name = \"Number of cats\") \n\n\n\n\n\n\n\n\n\n🎬 I would prefer to see the y-axis extend a little beyond the data and we can change the axis “limits” in the scale_y_continuous()\n\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\", \n           width = 1, \n           colour = \"black\") +\n  scale_x_discrete(expand = c(0, 0),\n                   name = \"Coat colour\") + \n  scale_y_continuous(expand = c(0, 0),\n                     name = \"Number of cats\",\n                     limits = c(0, 25)) \n\n\n\n\n\n\n\n\n\n\nGetting rid of the grey background\nThe grey grid background is useful for examining plots on a screen but for a report or publication you will want a more scientific style. Every aspect of the “theme” of a plot - the non-data elements such as fonts, background colours, axis line colours etc - can be controlled individually2 but there are some handy built in themes that apply several changes at once. One of these is theme_classic()\n🎬 Add theme_classic() to the plot:\n\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(width = 1, \n           colour = \"black\",\n           fill = \"lightblue\") +\n  scale_x_discrete(expand = c(0, 0),\n                   name = \"Coat colour\") + \n  scale_y_continuous(expand = c(0, 0),\n                     name = \"Number of cats\",\n                     limits = c(0, 25)) +\n  theme_classic()"
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#the-goal",
+    "href": "materials/introduction-to-r-and-rstudio.html#the-goal",
+    "title": "Introduction to R and RStudio",
+    "section": "The goal",
+    "text": "The goal"
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#getting-set-up-1",
+    "href": "materials/introduction-to-r-and-rstudio.html#getting-set-up-1",
+    "title": "Introduction to R and RStudio",
+    "section": "Getting set up",
+    "text": "Getting set up\n\n🎬 In RStudio do File | New project | New directory Be purposeful about where you create it and name it. I suggest cats-2\n🎬 Make a new script and save it as import-data-and-summarise-plot.R.\n🎬 Save this file to your cats-2 folder: The coat colour and mass of 62 cats - cat-coats.csv"
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#learning-about-working-directories-and-paths",
+    "href": "materials/introduction-to-r-and-rstudio.html#learning-about-working-directories-and-paths",
+    "title": "Introduction to R and RStudio",
+    "section": "Learning about working directories and paths",
+    "text": "Learning about working directories and paths\n\nReading in data from the Project folder cats-2\nCSV files can be read read in with core tidyverse (Wickham et al. 2019) functions.\n🎬 Load the packages\n\nlibrary(tidyverse)\n\nA .csv. extension suggests this is plain text file with comma separated columns. However, before we attempt to read it it, we should take a look at it. We can do this from RStudio\n🎬 Go to the Files pane (bottom right), click on the cat-coats.csv file and choose View File4\n🎬 Read in the csv file with:\n\ncats &lt;- read_csv(\"cat-coats.csv\")\n\nThe data from the file will be read into a dataframe called cats and you will be able to see it in the Environment.\n\n\nReading in data from a different folder\nTo help you understand relative file paths, we will now move the data file.\n🎬 First remove the dataframes you just created to make it easier to see whether you can successfully read in the files from a different place:\n\nrm(cats)\n\n🎬 Now make a new folder called data-raw. You can do this on the Files Pane by clicking New Folder and typing into the box that appears.\n🎬 Check the boxes next to the file names and choose More | Move… and select the data-raw folder.\nThe file will move. To import data from a file in the data-raw folder, you need to give the relative path to the file from the working directory. The working directory is the Project folder, cats-2 so the relative path is data-raw/cat-coats.csv\n🎬 Import the cat-coats.csv data like this:\n\ncats &lt;- read_csv(\"data-raw/cat-coats.csv\")"
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#creating-a-boxplot",
+    "href": "materials/introduction-to-r-and-rstudio.html#creating-a-boxplot",
+    "title": "Introduction to R and RStudio",
+    "section": "Creating a boxplot",
+    "text": "Creating a boxplot\n🎬 Create a simple barplot using ggplot like this:\n\nggplot(data = cats, aes(x = coat, y = mass)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n🛝 Can you format the boxplot as shown above?\n\n\nAnswer - don’t look until you have tried!\nggplot(data = cats, aes(x = coat, y = mass)) +\n  geom_boxplot() +\n  scale_y_continuous(name = \"Mass (g)\", \n                     limits = c(0, 10), \n                     expand = c(0, 0)) +\n  scale_x_discrete(name = \"Coat colour\") +\n  theme_classic()"
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#rstudio-interface",
+    "href": "materials/introduction-to-r-and-rstudio.html#rstudio-interface",
+    "title": "Introduction to R and RStudio",
+    "section": "🔧 RStudio Interface",
+    "text": "🔧 RStudio Interface\n\nScript – Where you write and save your code (.R or .qmd files)\nConsole – Where commands are executed and immediate output appears\nEnvironment – Lists your objects and data\nFiles / Plots / Help – Where you can manage files, view plots, read help docs"
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#core-ideas",
+    "href": "materials/introduction-to-r-and-rstudio.html#core-ideas",
+    "title": "Introduction to R and RStudio",
+    "section": "🧠 Core ideas",
+    "text": "🧠 Core ideas\n\nAssignment – Use &lt;- to store values: x &lt;- 5\nVectors – One-dimensional data: c(1, 2, 3)\nDataframes – Table-like structures that are most widely used: data.frame(name = c(\"A\", \"B\"))\nFunctions – Commands that perform actions: mean(x), ggplot()\nData import functions read data from files to dataframes for analysis\nPackages like tidyverse are loaded with library()\nAlways use RStudio Projects and paths relative to the project folder so your code is reproducible and portable"
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#plotting-with-ggplot2",
+    "href": "materials/introduction-to-r-and-rstudio.html#plotting-with-ggplot2",
+    "title": "Introduction to R and RStudio",
+    "section": "📊 Plotting with ggplot2",
+    "text": "📊 Plotting with ggplot2\n\nStructure – ggplot(data, aes(x, y)) + geom_*()\nCommon geoms – geom_col(), geom_boxplot(), geom_point()\nCustomize – fill, color, width, theme_classic()\nScales – Adjust axes with scale_*_continuous() or scale_*_discrete()\n\nPages made with R (R Core Team 2025), Quarto (Allaire et al. 2024), knitr (Xie 2024, 2015, 2014), kableExtra (Zhu 2024)"
+  },
+  {
+    "objectID": "materials/introduction-to-r-and-rstudio.html#footnotes",
+    "href": "materials/introduction-to-r-and-rstudio.html#footnotes",
+    "title": "Introduction to R and RStudio",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThere are also scale_x_continous() and scale_y_discrete() functions when you have those types of variable↩︎\nModify components of a theme↩︎\nPlain text files can be opened in notepad or other similar editor and still be readable.↩︎\nDo not be tempted to import data this way. Unless you are careful, your data import will not be scripted or will not be scripted correctly.↩︎"
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html",
     "href": "materials/reproducible-reports-with-quarto.html",
     "title": "Reproducible reports with Quarto",
     "section": "",
-    "text": "This workshop introduces you to Quarto (Allaire et al. 2024) for creating reproducible reports.\n🎬 An instruction to do something\n\nThe successful student will be able to:\n\nexplain what Quarto and markdown are\nappreciate the role of the YAML header\nset default code chunk behaviour and that for individual chunks\nuse headings, simple text formatting and special characters\nadd citations and references\nuse inline code to report results in text\ncreate automatically numbered tables and figures and cross reference them in text\n\n\n\nTypically people analyse, plot and write up in different programs.\n90% use Word/Pages/Writer/Googledocs\n\nUpdates to data require manual updates to all the figures and tables as well as to text reporting results.\nGraphs are saved to files and inserted into the final report.\nReordering figures, tables and equations means updating everywhere they are cross-referenced.\nSubmitting to a different journal requires reformatting the document.\nManual labour ….. error prone\n\n\nAn open-source scientific and technical publishing system that allows you to create dynamic reproducible reports in a variety of output formats.\n\nNext generation RMarkdown. Many new features, greater standardisation and more flexibility.\n\nMarkdown is a lightweight markup language for creating formatted text using a plain-text editor. It was designed by John Gruber in 2004\nRMarkdown is an extension of Markdown that adds support for embedding R code chunks in Markdown documents. It was created by JJ Allaire and Yihui Xie early in 2014 but has been worked on by many others since.\n\n\nMutli-language: Python, R, Julia, and Observable.\nInclude auto-numbered and cross-referencable equations, figures and tables\nIntegrates with Zotero"
+    "text": "This workshop introduces you to Quarto (Allaire et al. 2024) for creating reproducible reports.\n🎬 An instruction to do something\n\n\nThe successful student will be able to:\n\nexplain what Quarto and markdown are\nappreciate the role of the YAML header\nset default code chunk behaviour and that for individual chunks\nuse headings, simple text formatting and special characters\nadd citations and references\nuse inline code to report results in text\ncreate automatically numbered tables and figures and cross reference them in text\n\n\n\n\n\nTypically people analyse, plot and write up in different programs.\n90% use Word/Pages/Writer/Googledocs\nUpdates to data require manual updates to all the figures and tables as well as to text reporting results.\nGraphs are saved to files and inserted into the final report.\nReordering figures, tables and equations means updating everywhere they are cross-referenced.\nSubmitting to a different journal requires reformatting the document.\nManual labour ….. error prone\n\n\n\n\n\nAn open-source scientific and technical publishing system that allows you to create dynamic reproducible reports in a variety of output formats.\nNext generation RMarkdown. Many new features, greater standardisation and more flexibility.\n\nMarkdown is a lightweight markup language for creating formatted text using a plain-text editor. It was designed by John Gruber in 2004\nRMarkdown is an extension of Markdown that adds support for embedding R code chunks in Markdown documents. It was created by JJ Allaire and Yihui Xie early in 2014 but has been worked on by many others since.\n\nMutli-language: Python, R, Julia, and Observable.\nInclude auto-numbered and cross-referencable equations, figures and tables\nIntegrates with Zotero"
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html#learning-outcomes",
@@ -53,14 +144,14 @@
     "href": "materials/reproducible-reports-with-quarto.html#current-process",
     "title": "Reproducible reports with Quarto",
     "section": "",
-    "text": "Typically people analyse, plot and write up in different programs.\n90% use Word/Pages/Writer/Googledocs\n\nUpdates to data require manual updates to all the figures and tables as well as to text reporting results.\nGraphs are saved to files and inserted into the final report.\nReordering figures, tables and equations means updating everywhere they are cross-referenced.\nSubmitting to a different journal requires reformatting the document.\nManual labour ….. error prone"
+    "text": "Typically people analyse, plot and write up in different programs.\n90% use Word/Pages/Writer/Googledocs\nUpdates to data require manual updates to all the figures and tables as well as to text reporting results.\nGraphs are saved to files and inserted into the final report.\nReordering figures, tables and equations means updating everywhere they are cross-referenced.\nSubmitting to a different journal requires reformatting the document.\nManual labour ….. error prone"
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html#what-is-quarto",
     "href": "materials/reproducible-reports-with-quarto.html#what-is-quarto",
     "title": "Reproducible reports with Quarto",
     "section": "",
-    "text": "An open-source scientific and technical publishing system that allows you to create dynamic reproducible reports in a variety of output formats.\n\nNext generation RMarkdown. Many new features, greater standardisation and more flexibility.\n\nMarkdown is a lightweight markup language for creating formatted text using a plain-text editor. It was designed by John Gruber in 2004\nRMarkdown is an extension of Markdown that adds support for embedding R code chunks in Markdown documents. It was created by JJ Allaire and Yihui Xie early in 2014 but has been worked on by many others since.\n\n\nMutli-language: Python, R, Julia, and Observable.\nInclude auto-numbered and cross-referencable equations, figures and tables\nIntegrates with Zotero"
+    "text": "An open-source scientific and technical publishing system that allows you to create dynamic reproducible reports in a variety of output formats.\nNext generation RMarkdown. Many new features, greater standardisation and more flexibility.\n\nMarkdown is a lightweight markup language for creating formatted text using a plain-text editor. It was designed by John Gruber in 2004\nRMarkdown is an extension of Markdown that adds support for embedding R code chunks in Markdown documents. It was created by JJ Allaire and Yihui Xie early in 2014 but has been worked on by many others since.\n\nMutli-language: Python, R, Julia, and Observable.\nInclude auto-numbered and cross-referencable equations, figures and tables\nIntegrates with Zotero"
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html#key-points-from-the-demo",
@@ -74,21 +165,21 @@
     "href": "materials/reproducible-reports-with-quarto.html#text-formatting",
     "title": "Reproducible reports with Quarto",
     "section": "Text Formatting",
-    "text": "Text Formatting\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n*italics*,**bold**\n\nitalics, bold\n\n\n\n***bold italics ***\nbold italics\n\n\nsuperscript^2^\nsuperscript2\n\n\n\nsubscript~2~\nsubscript2\n\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code"
+    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*,**bold**\nitalics, bold\n\n\n***bold italics ***\nbold italics\n\n\nsuperscript^2^\nsuperscript2\n\n\nsubscript~2~\nsubscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code"
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html#headings",
     "href": "materials/reproducible-reports-with-quarto.html#headings",
     "title": "Reproducible reports with Quarto",
     "section": "Headings",
-    "text": "Headings\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n\nLinks & Images\n\n\nMarkdown Syntax\nOutput\n\n\n\n[Quar\nto](https://quarto.org)\nQuarto\n\n\n![Cap\ntion](images/chaff.jpg)\n\n\nCaption"
+    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n\n\nLinks & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n[Quar\nto](https://quarto.org)\nQuarto\n\n\n![Cap\ntion](images/chaff.jpg)\n\n\n\nCaption"
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html#equations",
     "href": "materials/reproducible-reports-with-quarto.html#equations",
     "title": "Reproducible reports with Quarto",
     "section": "Equations",
-    "text": "Equations\nUse $ delimiters for inline maths and $$ delimiters for display maths. For example:\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\ni\nnline maths: $E = mc^{2}$\ninline maths: \\(E=mc^{2}\\)\n\n\n\ndisplay maths:\n\n$$E = mc^{2}$$\n\ndisplay maths:\n\\[E = mc^{2}\\]"
+    "text": "Equations\nUse $ delimiters for inline maths and $$ delimiters for display maths. For example:\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ni\nnline maths: $E = mc^{2}$\ninline maths: \\(E=mc^{2}\\)\n\n\ndisplay maths:\n\n$$E = mc^{2}$$\ndisplay maths:\n\\[E = mc^{2}\\]"
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html#divs",
@@ -109,7 +200,7 @@
     "href": "materials/reproducible-reports-with-quarto.html#change-some-rstudio-settings",
     "title": "Reproducible reports with Quarto",
     "section": "Change some RStudio settings",
-    "text": "Change some RStudio settings\n🎬 Tools | Global Options\n\n\nGeneral:\n\nTurn off the three “Restore ….” options\nTurn “Save workspace to .RData on exit” to Never\n\n\n\nR Markdown:\n\nTurn “Show output preview in:” to Viewer pane"
+    "text": "Change some RStudio settings\n🎬 Tools | Global Options\n\nGeneral:\n\nTurn off the three “Restore ….” options\nTurn “Save workspace to .RData on exit” to Never\n\nR Markdown:\n\nTurn “Show output preview in:” to Viewer pane"
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html#your-project-contains",
@@ -123,14 +214,14 @@
     "href": "materials/reproducible-reports-with-quarto.html#add-some-content",
     "title": "Reproducible reports with Quarto",
     "section": "Add some content",
-    "text": "Add some content\n🎬 Add a code chunk (Ctrl-Shift-I) for a simple graph.\n\n```{r}\nhist(rnorm(100))\n```\n\n\n\n\n\n\n\n🎬 Hit Render (Ctrl-Shift-K)"
+    "text": "Add some content\n🎬 Add a code chunk (Ctrl-Shift-I) for a simple graph.\n\n```{r}\nhist(rnorm(100))\n```\n\n\n\n\n\n\n\n\n🎬 Hit Render (Ctrl-Shift-K)"
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html#edit-the-yaml-header-default-code-chunk-options",
     "href": "materials/reproducible-reports-with-quarto.html#edit-the-yaml-header-default-code-chunk-options",
     "title": "Reproducible reports with Quarto",
     "section": "Edit the YAML header: default code chunk options",
-    "text": "Edit the YAML header: default code chunk options\n🎬 Set some default code chunk options. I recommend these for reports\n---\ntitle: \"The difference in mass between subspecies of common chaffinch.\"\nauthor: \"Emma Rand\"\nengine: knitr\nformat:\n  html\nexecute:\n  echo: false\n  include: true\n  error: false\n  message: false\n  warning: false\n\n---\n🎬 Hit Render (Ctrl-Shift-K)\nCode chunk options\n\n\necho: false code will not be included in output\n\ninclude: true output will be included\n\nerror: false halt render if a code error occurs\n\nmessage: false messages and warnings will not be included\nwarning: false\n\n🎬 Experiment with change the options and re-rendering. Try misspelling rnorm to see the error option in action."
+    "text": "Edit the YAML header: default code chunk options\n🎬 Set some default code chunk options. I recommend these for reports\n---\ntitle: \"The difference in mass between subspecies of common chaffinch.\"\nauthor: \"Emma Rand\"\nengine: knitr\nformat:\n  html\nexecute:\n  echo: false\n  include: true\n  error: false\n  message: false\n  warning: false\n\n---\n🎬 Hit Render (Ctrl-Shift-K)\nCode chunk options\n\necho: false code will not be included in output\ninclude: true output will be included\nerror: false halt render if a code error occurs\nmessage: false messages and warnings will not be included\nwarning: false\n\n🎬 Experiment with change the options and re-rendering. Try misspelling rnorm to see the error option in action."
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html#an-introduction",
@@ -200,7 +291,7 @@
     "href": "materials/reproducible-reports-with-quarto.html#the-panels",
     "title": "Reproducible reports with Quarto",
     "section": "The panels",
-    "text": "The panels\n🎬 Add these two chunks to the Results section below the last figure (make sure you’re outside the last div)\n\n```{r}\n#| label: fig-hist-canariensis\nchaff |&gt; filter(subspecies == \"canariensis\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 8) +\n  theme_minimal()\n```\n\n\n\n\n\n\nFigure 2\n\n\n\n\n\n```{r}\n#| label: fig-hist-coelebs\nchaff |&gt; filter(subspecies == \"coelebs\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 8) +\n  theme_minimal()\n```\n\n\n\n\n\n\nFigure 3\n\n\n\n\nIf you render, you’ll see that the two figures are added as separate figures."
+    "text": "The panels\n🎬 Add these two chunks to the Results section below the last figure (make sure you’re outside the last div)\n\n```{r}\n#| label: fig-hist-canariensis\nchaff |&gt; filter(subspecies == \"canariensis\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 8) +\n  theme_minimal()\n```\n\n\n\n\n\n\n\nFigure 2\n\n\n\n\n\n\n```{r}\n#| label: fig-hist-coelebs\nchaff |&gt; filter(subspecies == \"coelebs\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 8) +\n  theme_minimal()\n```\n\n\n\n\n\n\n\nFigure 3\n\n\n\n\n\nIf you render, you’ll see that the two figures are added as separate figures."
   },
   {
     "objectID": "materials/reproducible-reports-with-quarto.html#as-one-figure",
@@ -252,179 +343,95 @@
     "text": "Extra exercises\n🛝 Make a folder called images and save these two images of the subspecies to it: canariensis.jpg and coelebs.jpg. Then add images of each of the chaffinch subspecies as a multi-panel figure in the introduction"
   },
   {
-    "objectID": "materials/introduction-to-r-and-rstudio.html",
-    "href": "materials/introduction-to-r-and-rstudio.html",
-    "title": "Introduction to R and RStudio",
-    "section": "",
-    "text": "Finding your way round RStudio\nTyping in data and plotting it\nImporting data: working directories and paths"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#rstudio-live-demonstration",
-    "href": "materials/introduction-to-r-and-rstudio.html#rstudio-live-demonstration",
-    "title": "Introduction to R and RStudio",
-    "section": "RStudio: live demonstration",
-    "text": "RStudio: live demonstration\n\nthe panels\n\nTop left: Script - write and edit code and comments to keep\nBottom left: Console - where commands get executed and can be typed\nTop right: Environment - where you can see the objects you have created; History - of commands\nBottom right: Files - a file explorer; Plots; Packages; Help\n\n\n\nmaking yourself comfortable\ntyping in the console sending commands\nusing R as a calculator\nassigning values\nwhere to see objects\nusing a script - make sure to execute\ncomments #\ndata types and structures\nfunctions c()\n\ntypes of R files: .R, .RData .RHistory"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#overview-of-demonstration",
-    "href": "materials/introduction-to-r-and-rstudio.html#overview-of-demonstration",
-    "title": "Introduction to R and RStudio",
-    "section": "Overview of demonstration",
-    "text": "Overview of demonstration\nThere are several ways you can recap the demo at a later date:\n🖼️ Refer to this infographic Larger format \n📖 Read First Steps in RStudio\n📹 Watch"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#the-goal-plot",
-    "href": "materials/introduction-to-r-and-rstudio.html#the-goal-plot",
-    "title": "Introduction to R and RStudio",
-    "section": "The goal 🐈 plot",
-    "text": "The goal 🐈 plot\nWe will work with some data on the coat colour of 62 cats. You are going to type data in R, summarise and plot it\nThe data are as a frequency table:\n\n\n\nFrequency of coat colours in 62 cats\n\nCoat colour\nNo. cats\n\n\n\nblack\n23\n\n\nwhite\n15\n\n\ntabby\n8\n\n\nginger\n10\n\n\ntortoiseshell\n5\n\n\ncalico\n1\n\n\n\n\n\nYou will create a figure like this:"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#getting-set-up",
-    "href": "materials/introduction-to-r-and-rstudio.html#getting-set-up",
-    "title": "Introduction to R and RStudio",
-    "section": "Getting set up",
-    "text": "Getting set up\n\n🎬 In RStudio do File | New project | New directory Be purposeful about where you create it and name it. I suggest cats-1\n🎬 Make a new script and save it as type-data-and-plot.R to carry out the rest of the work."
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#creating-the-data",
-    "href": "materials/introduction-to-r-and-rstudio.html#creating-the-data",
-    "title": "Introduction to R and RStudio",
-    "section": "Creating the data",
-    "text": "Creating the data\nStart by making a vector called coat that holds coat colours\n🎬 Write the following in your script:\n\n# coat colours\ncoat &lt;- c(\"black\", \"white\", \"tabby\", \"ginger\", \"tortoiseshell\", \"calico\")\n\nThe shortcut for &lt;- is Alt+- (hold the Alt key down then hit the minus key ).\nEnsure your cursor is on the line with the command and do Control+Enter to send the command to the console to be executed.\nI have used a comment. Comment your code as much as possible!\n🛝 Create a vector called freq containing the numbers of cats with each coat colour\n\nAnswer - don’t look until you have tried!# numbers of cats with each coat colour\nfreq &lt;- c(23, 15, 8, 10, 5, 1)"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#packages",
-    "href": "materials/introduction-to-r-and-rstudio.html#packages",
-    "title": "Introduction to R and RStudio",
-    "section": "Packages",
-    "text": "Packages\nCommands like c() and sum() are in packages which are part the ‘base’ R system. A package is a collection of related commands. Base packages are installed automatically when you install R.\nOther packages, such as ggplot2 (Wickham 2016) need to be installed once, and then loaded each session. ggplot2 is one of the tidyverse (Wickham et al. 2019) packages.\n🎬 Load the tidyverse:\n\nlibrary(tidyverse)\n\nYou will likely be warned of some function name conflicts but these will not be a problem for you."
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#plotting-the-data-with-ggplot",
-    "href": "materials/introduction-to-r-and-rstudio.html#plotting-the-data-with-ggplot",
-    "title": "Introduction to R and RStudio",
-    "section": "Plotting the data with ggplot()\n",
-    "text": "Plotting the data with ggplot()\n\n\n\nggplot() takes a dataframe for an argument\nWe can make a dataframe of the two vectors, coat and freq using the data.frame() function.\n\n🎬 Make a dataframe called coat_data\n\ncoat_data &lt;- data.frame(coat, freq)\n\n🎬 Click on coat_data in the Environment to open a spreadsheet-like view of it.\n🎬 Create a simple barplot using ggplot like this:\n\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col()\n\n\n\n\n\n\n\n\n\nggplot() alone creates a blank plot.\n\nggplot(data = coat_data) looks the same.\n\naes() gives the ‘Aesthetic mappings’. How variables (columns) are mapped to visual properties (aesthetics) e.g., axes, colour, shapes.\nThus ggplot(data = coat_data, aes(x = coat, y = freq)) produces a plot with axes\n\ngeom_col: A ‘Geom’ (Geometric object) gives the visual representations of the data: points, lines, bars, boxplots etc.\n\nNote that ggplot2 is the name of the package and ggplot() is its most important command."
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#using-the-help-manual",
-    "href": "materials/introduction-to-r-and-rstudio.html#using-the-help-manual",
-    "title": "Introduction to R and RStudio",
-    "section": "Using the help manual",
-    "text": "Using the help manual\nThe manual tells us about a function. ‘Arguments’ can be added to the geom_col() command inside the brackets.\nCommands do something and their arguments (in brackets) and can specify:\n\nwhat object to do it to\nhow exactly to do it\n\nMany arguments have defaults so you don’t always need to supply them.\n🎬 Open the manual page for geom_col() using:\n\n?geom_col\n\nThe manual page has several sections.\n\n\nDescription an overview of what the command does\n\nUsage lists arguments\n\nform: argument name = default value\nsome arguments MUST be supplied others have defaults\n\n... means etc and includes arguments that can be passed to many ‘geoms’\n\n\n\nArguments gives the detail about the arguments\n\nDetails describes how the command works in more detail\n\nValue gives the output of the command\nDon’t be too perturbed by not fully understanding the information"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#customising-a-plot",
-    "href": "materials/introduction-to-r-and-rstudio.html#customising-a-plot",
-    "title": "Introduction to R and RStudio",
-    "section": "Customising a plot",
-    "text": "Customising a plot\nBar colour\n🎬 Change the fill of the bars using fill:\n\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\")\n\n\n\n\n\n\n\nColours can be given by their name, “lightblue” or code, “#ADD8E6”.\nLook up by name or code\n🎬 Change the bars to a colour you like.\nfill is one of the arguments covered by .... fill is an ‘aesthetic’. If you look for ... in the list of arguments you will see it says:\n\nOther arguments passed on to layer(). These are often aesthetics, used to set an aesthetic to a fixed value, like colour = “red” or size = 3. They may also be parameters to the paired geom/stat.\n\nWe just set the fill aesthetic to a fixed value.\nFurther down the manual, there is a section on Aesthetics which lists those understood by geom_col()\nWe can set (map) the fill aesthetic to a fixed colour inside geom_col() or map it to a variable from the dataframe inside the aes() instead. This means the colour will be different for different values in that variable.\n🎬 Map the fill aesthetic to the coat variable:\n\nggplot(data = coat_data, aes(x = coat, y = freq, fill = coat)) +\n  geom_col()\n\n\n\n\n\n\n\nNote that we have taken fill = \"lightblue\" out of the geom_col() and instead put fill = coat in the aes().\n🛝 Use the manual to put the bars next to each other. Look for the argument that will mean there is no space between the bars.\n\nAnswer - don’t look until you have tried!ggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\", width = 1)\n\n\n\n\n\n\n\n🛝 Use the manual to change the colour of the lines around each bar to black.\n\nAnswer - don’t look until you have tried!ggplot(data = coat_data,\n       aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\", \n           width = 1, \n           colour = \"black\")\n\n\n\n\n\n\n\nChanging the axes\nWe can make changes to the axes using:\n\nChanges to a discrete x axis: scale_x_discrete()\n\nChanges to a continuous y axis: scale_y_continuous()\n\n\nggplot automatically extends the axes slightly. You can turn this behaviour off with the expand argument in scale_x_discrete() and scale_y_continuous().1\n🎬 To remove the gap between the axes and the data:\n\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\", \n           width = 1, \n           colour = \"black\") +\n  scale_x_discrete(expand = c(0, 0)) + \n  scale_y_continuous(expand = c(0, 0)) \n\n\n\n\n\n\n\nEach ‘layer’ is added to the ggplot() command with a +\n\n\n\n\n\n\nTop Tip\n\n\n\nMake your code easier to read by using white space and new lines\n\nput spaces around = , -&gt; and after ,\n\nuse a newline after every comma in a command with lots of arguments\n\n\n\n🛝 Look up scale_x_discrete in the manual and work out how to change the axis title from “coat” to “Coat colour”. Also change the y-axis title.\n\nAnswer - don’t look until you have tried!ggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\", \n           width = 1, \n           colour = \"black\") +\n  scale_x_discrete(expand = c(0, 0),\n                   name = \"Coat colour\") + \n  scale_y_continuous(expand = c(0, 0),\n                     name = \"Number of cats\") \n\n\n\n\n\n\n\n🎬 I would prefer to see the y-axis extend a little beyond the data and we can change the axis “limits” in the scale_y_continuous()\n\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(fill = \"lightblue\", \n           width = 1, \n           colour = \"black\") +\n  scale_x_discrete(expand = c(0, 0),\n                   name = \"Coat colour\") + \n  scale_y_continuous(expand = c(0, 0),\n                     name = \"Number of cats\",\n                     limits = c(0, 25)) \n\n\n\n\n\n\n\nGetting rid of the grey background\nThe grey grid background is useful for examining plots on a screen but for a report or publication you will want a more scientific style. Every aspect of the “theme” of a plot - the non-data elements such as fonts, background colours, axis line colours etc - can be controlled individually2 but there are some handy built in themes that apply several changes at once. One of these is theme_classic()\n🎬 Add theme_classic() to the plot:\n\nggplot(data = coat_data, aes(x = coat, y = freq)) +\n  geom_col(width = 1, \n           colour = \"black\",\n           fill = \"lightblue\") +\n  scale_x_discrete(expand = c(0, 0),\n                   name = \"Coat colour\") + \n  scale_y_continuous(expand = c(0, 0),\n                     name = \"Number of cats\",\n                     limits = c(0, 25)) +\n  theme_classic()"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#the-goal",
-    "href": "materials/introduction-to-r-and-rstudio.html#the-goal",
-    "title": "Introduction to R and RStudio",
-    "section": "The goal",
-    "text": "The goal"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#getting-set-up-1",
-    "href": "materials/introduction-to-r-and-rstudio.html#getting-set-up-1",
-    "title": "Introduction to R and RStudio",
-    "section": "Getting set up",
-    "text": "Getting set up\n\n🎬 In RStudio do File | New project | New directory Be purposeful about where you create it and name it. I suggest cats-2\n🎬 Make a new script and save it as import-data-and-summarise-plot.R.\n🎬 Save this file to your cats-2 folder: The coat colour and mass of 62 cats - cat-coats.csv"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#learning-about-working-directories-and-paths",
-    "href": "materials/introduction-to-r-and-rstudio.html#learning-about-working-directories-and-paths",
-    "title": "Introduction to R and RStudio",
-    "section": "Learning about working directories and paths",
-    "text": "Learning about working directories and paths\nReading in data from the Project folder cats-2\n\nCSV files can be read read in with core tidyverse (Wickham et al. 2019) functions.\n🎬 Load the packages\n\nlibrary(tidyverse)\n\nA .csv. extension suggests this is plain text file with comma separated columns. However, before we attempt to read it it, we should take a look at it. We can do this from RStudio\n🎬 Go to the Files pane (bottom right), click on the cat-coats.csv file and choose View File4\n🎬 Read in the csv file with:\n\ncats &lt;- read_csv(\"cat-coats.csv\")\n\nThe data from the file will be read into a dataframe called cats and you will be able to see it in the Environment.\nReading in data from a different folder\nTo help you understand relative file paths, we will now move the data file.\n🎬 First remove the dataframes you just created to make it easier to see whether you can successfully read in the files from a different place:\n\nrm(cats)\n\n🎬 Now make a new folder called data-raw. You can do this on the Files Pane by clicking New Folder and typing into the box that appears.\n🎬 Check the boxes next to the file names and choose More | Move… and select the data-raw folder.\nThe file will move. To import data from a file in the data-raw folder, you need to give the relative path to the file from the working directory. The working directory is the Project folder, cats-2 so the relative path is data-raw/cat-coats.csv\n🎬 Import the cat-coats.csv data like this:\n\ncats &lt;- read_csv(\"data-raw/cat-coats.csv\")"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#creating-a-boxplot",
-    "href": "materials/introduction-to-r-and-rstudio.html#creating-a-boxplot",
-    "title": "Introduction to R and RStudio",
-    "section": "Creating a boxplot",
-    "text": "Creating a boxplot\n🎬 Create a simple barplot using ggplot like this:\n\nggplot(data = cats, aes(x = coat, y = mass)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n🛝 Can you format the boxplot as shown above?\n\nAnswer - don’t look until you have tried!ggplot(data = cats, aes(x = coat, y = mass)) +\n  geom_boxplot() +\n  scale_y_continuous(name = \"Mass (g)\", \n                     limits = c(0, 10), \n                     expand = c(0, 0)) +\n  scale_x_discrete(name = \"Coat colour\") +\n  theme_classic()"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#rstudio-interface",
-    "href": "materials/introduction-to-r-and-rstudio.html#rstudio-interface",
-    "title": "Introduction to R and RStudio",
-    "section": "🔧 RStudio Interface",
-    "text": "🔧 RStudio Interface\n\nScript – Where you write and save your code (.R or .qmd files)\nConsole – Where commands are executed and immediate output appears\nEnvironment – Lists your objects and data\nFiles / Plots / Help – Where you can manage files, view plots, read help docs"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#core-ideas",
-    "href": "materials/introduction-to-r-and-rstudio.html#core-ideas",
-    "title": "Introduction to R and RStudio",
-    "section": "🧠 Core ideas",
-    "text": "🧠 Core ideas\n\nAssignment – Use &lt;- to store values: x &lt;- 5\n\nVectors – One-dimensional data: c(1, 2, 3)\n\nDataframes – Table-like structures that are most widely used: data.frame(name = c(\"A\", \"B\"))\n\nFunctions – Commands that perform actions: mean(x), ggplot()\n\nData import functions read data from files to dataframes for analysis\nPackages like tidyverse are loaded with library()\n\nAlways use RStudio Projects and paths relative to the project folder so your code is reproducible and portable"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#plotting-with-ggplot2",
-    "href": "materials/introduction-to-r-and-rstudio.html#plotting-with-ggplot2",
-    "title": "Introduction to R and RStudio",
-    "section": "📊 Plotting with ggplot2\n",
-    "text": "📊 Plotting with ggplot2\n\n\nStructure – ggplot(data, aes(x, y)) + geom_*()\n\nCommon geoms – geom_col(), geom_boxplot(), geom_point()\n\nCustomize – fill, color, width, theme_classic()\n\nScales – Adjust axes with scale_*_continuous() or scale_*_discrete()\n\n\nPages made with R (R Core Team 2025), Quarto (Allaire et al. 2024), knitr (Xie 2024, 2015, 2014), kableExtra (Zhu 2024)"
-  },
-  {
-    "objectID": "materials/introduction-to-r-and-rstudio.html#footnotes",
-    "href": "materials/introduction-to-r-and-rstudio.html#footnotes",
-    "title": "Introduction to R and RStudio",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nThere are also scale_x_continous() and scale_y_discrete() functions when you have those types of variable↩︎\nModify components of a theme↩︎\nPlain text files can be opened in notepad or other similar editor and still be readable.↩︎\nDo not be tempted to import data this way. Unless you are careful, your data import will not be scripted or will not be scripted correctly.↩︎"
-  },
-  {
     "objectID": "LICENSE.html",
     "href": "LICENSE.html",
-    "title": "Introduction to<br>Reproducibility with R\"",
+    "title": "Introduction to<br>Reproducibility with R",
     "section": "",
     "text": "Attribution 4.0 International\n=======================================================================\nCreative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.\nUsing Creative Commons Public Licenses\nCreative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.\n Considerations for licensors: Our public licenses are\n intended for use by those authorized to give the public\n permission to use material in ways otherwise restricted by\n copyright and certain other rights. Our licenses are\n irrevocable. Licensors should read and understand the terms\n and conditions of the license they choose before applying it.\n Licensors should also secure all rights necessary before\n applying our licenses so that the public can reuse the\n material as expected. Licensors should clearly mark any\n material not subject to the license. This includes other CC-\n licensed material, or material used under an exception or\n limitation to copyright. More considerations for licensors:\nwiki.creativecommons.org/Considerations_for_licensors\n\n Considerations for the public: By using one of our public\n licenses, a licensor grants the public permission to use the\n licensed material under specified terms and conditions. If\n the licensor's permission is not necessary for any reason--for\n example, because of any applicable exception or limitation to\n copyright--then that use is not regulated by the license. Our\n licenses grant only permissions under copyright and certain\n other rights that a licensor has authority to grant. Use of\n the licensed material may still be restricted for other\n reasons, including because others have copyright or other\n rights in the material. A licensor may make special requests,\n such as asking that all changes be marked or described.\n Although not required by our licenses, you are encouraged to\n respect those requests where reasonable. More considerations\n for the public: \nwiki.creativecommons.org/Considerations_for_licensees\n=======================================================================\nCreative Commons Attribution 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part; and\nproduce, reproduce, and Share Adapted Material.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)\n\nnever produces Adapted Material.\n\nDownstream recipients.\n\nOffer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nNo downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\n\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\nIf You Share Adapted Material You produce, the Adapter’s License You apply must not prevent recipients of the Adapted Material from complying with this Public License.\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material; and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.\nTO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES, COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n=======================================================================\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "SETAC Student Conference 2025",
+    "title": "Welcome",
     "section": "",
-    "text": "Training workshop for the SETAC 13th Young Environmental Scientists Meeting 2025-08-12. It is designed and delivered by Emma Rand of The University of York.\n\n\nAn increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where Reproducibility with R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming.\nThis workshop will introduce you to R and RStudio, the most widely used interface for working with R. You will learn how to import data, manipulate it, summarise it and plot it. You will learn how to use an organised project-oriented workflow with well commented scripts so that you can understand your work in the future, and share it with others. In addition, you will learn what a working directory and a file path are - these are key concepts in computing generally but ones which are often not taught to biologists.\n\n\n\nIt is impossible to cover everything you might ever need! Different people will use different methods and tools. Topics have been chosen because they are: foundational, widely applicable and transferable conceptually.\n\n\n\nAfter this workshop the successful learner will be able to:\n\nFind their way around the RStudio windows\nCreate and plot data using ggplot\nExplain the rationale for scripting analysis\nKnow how to load packages\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others"
+    "text": "An increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where Reproducibility with R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming.\nThis workshop will introduce you to R and RStudio, the most widely used interface for working with R. You will learn how to import data, manipulate it, summarise it and plot it. You will learn how to use an organised project-oriented workflow with well commented scripts so that you can understand your work in the future, and share it with others. In addition, you will learn what a working directory and a file path are - these are key concepts in computing generally but ones which are often not taught to biologists.\n\n\n\nIt is impossible to cover everything you might ever need! Different people will use different methods and tools. Topics have been chosen because they are: foundational, widely applicable and transferable conceptually.\n\n\n\nAfter this workshop the successful learner will be able to:\n\nFind their way around the RStudio windows\nCreate and plot data using ggplot\nExplain the rationale for scripting analysis\nKnow how to load packages\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others\n\nEmma Rand is a Professor in the Department of Biology at the University of York where she specialises in teaching data science and reproducibility, particularly to those who do not see themselves as programmers. She leads a UKRI funded projects called Cloud-SPAN and the UKRI Digital Research Skills Catalyst."
   },
   {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
-    "title": "SETAC Student Conference 2025",
+    "title": "Welcome",
     "section": "",
     "text": "An increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where Reproducibility with R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming.\nThis workshop will introduce you to R and RStudio, the most widely used interface for working with R. You will learn how to import data, manipulate it, summarise it and plot it. You will learn how to use an organised project-oriented workflow with well commented scripts so that you can understand your work in the future, and share it with others. In addition, you will learn what a working directory and a file path are - these are key concepts in computing generally but ones which are often not taught to biologists."
   },
   {
     "objectID": "index.html#philosophy-and-approach",
     "href": "index.html#philosophy-and-approach",
-    "title": "SETAC Student Conference 2025",
+    "title": "Welcome",
     "section": "",
     "text": "It is impossible to cover everything you might ever need! Different people will use different methods and tools. Topics have been chosen because they are: foundational, widely applicable and transferable conceptually."
   },
   {
     "objectID": "index.html#learning-outcomes",
     "href": "index.html#learning-outcomes",
-    "title": "SETAC Student Conference 2025",
+    "title": "Welcome",
     "section": "",
-    "text": "After this workshop the successful learner will be able to:\n\nFind their way around the RStudio windows\nCreate and plot data using ggplot\nExplain the rationale for scripting analysis\nKnow how to load packages\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others"
+    "text": "After this workshop the successful learner will be able to:\n\nFind their way around the RStudio windows\nCreate and plot data using ggplot\nExplain the rationale for scripting analysis\nKnow how to load packages\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others\n\nEmma Rand is a Professor in the Department of Biology at the University of York where she specialises in teaching data science and reproducibility, particularly to those who do not see themselves as programmers. She leads a UKRI funded projects called Cloud-SPAN and the UKRI Digital Research Skills Catalyst."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Introduction and Principles of reproducibility\n\nIntroduction\nPrinciples of reproducibility\n\nIntroduction to R and RStudio\n\nFinding your way round RStudio\nTyping in data and plotting it"
+  },
+  {
+    "objectID": "schedule.html#section",
+    "href": "schedule.html#section",
+    "title": "Schedule",
+    "section": "",
+    "text": "Introduction and Principles of reproducibility\n\nIntroduction\nPrinciples of reproducibility\n\nIntroduction to R and RStudio\n\nFinding your way round RStudio\nTyping in data and plotting it"
+  },
+  {
+    "objectID": "schedule.html#break-20-mins",
+    "href": "schedule.html#break-20-mins",
+    "title": "Schedule",
+    "section": "1030 - 1050 Break 20 mins",
+    "text": "1030 - 1050 Break 20 mins"
+  },
+  {
+    "objectID": "schedule.html#section-1",
+    "href": "schedule.html#section-1",
+    "title": "Schedule",
+    "section": "1050 – 1200",
+    "text": "1050 – 1200\nIntroduction to R and RStudio continued\n\nImporting data\nWorking directories and file paths"
+  },
+  {
+    "objectID": "schedule.html#optional-material",
+    "href": "schedule.html#optional-material",
+    "title": "Schedule",
+    "section": "Optional material",
+    "text": "Optional material\nData manipulation\n\nFiltering rows 1\nAdding columns\nSummarising\nWriting data to a file\n\nComputational Analysis for Bioscientists"
+  },
+  {
+    "objectID": "prerequisites.html",
+    "href": "prerequisites.html",
+    "title": "Prerequisites",
+    "section": "",
+    "text": "Pre-course instructions for participants\nYou do not need any prior experience of R or RStudio.\nThere are Windows PCs at the venue and you are not required to bring your own machine. Participants from outside of York will be provided with a temporary IT account. However, if you prefer to work on your own machine please install the following prior to attending:\n\nR version 4.4.1 or higher:https://cloud.r-project.org/\nRStudio Version: 2024.12.1+563 or higher: https://posit.co/download/rstudio-desktop/\nThese R packages from CRAN: tidyverse, devtools. Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window.\nTinyTeX: Once you have installed R and RStudio, start RStudio up and go to the Terminal (lower left, behind the console) and type: quarto install tinytex and press enter."
   },
   {
     "objectID": "materials/data-manipulation.html",
     "href": "materials/data-manipulation.html",
     "title": "Data manipulation",
     "section": "",
-    "text": "Summarising data\n\nWhole column\nBy groups in another column\n\n\nFiltering rows\nAdding columns\nWriting data to a file"
+    "text": "Summarising data\n\nWhole column\nBy groups in another column\n\nFiltering rows\nAdding columns\nWriting data to a file"
   },
   {
     "objectID": "materials/data-manipulation.html#whole-column",
     "href": "materials/data-manipulation.html#whole-column",
     "title": "Data manipulation",
     "section": "Whole column",
-    "text": "Whole column\nWe can use summarise() to get summary statistics for a whole column.\n🎬 Find the mean with:\n\ncats |&gt; \n  summarise(mean(mass))\n\n# A tibble: 1 × 1\n  `mean(mass)`\n         &lt;dbl&gt;\n1         4.51\n\n\nThe result is a dataframe (not a vector). This is one of the very useful features of dplyr and the tidyverse. Dataframes are the main data structure in R, and most functions in the tidyverse return dataframes. This makes it easy to chain together multiple operations using the pipe operator (|&gt;).\nBy default the name of the column is the function name. This is not very informative, so we can give it a more meaningful name.\nNaming the column\nTo name the column, we can use the name = argument in the summarise() function.\n🎬 Give a name to the new column containing the mean:\n\ncats |&gt; \n  summarise(mean = mean(mass))\n\n# A tibble: 1 × 1\n   mean\n  &lt;dbl&gt;\n1  4.51\n\n\nAnother useful feature of dataframe outputs is that it is easy to add more columns.\nAdding other summary stats\nTo add additional summary statistics, we can just add more arguments to the summarise() function. These are separated by commas.\n🎬 Find the mean, standard deviation and sample size:\n\ncats |&gt;\n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass))\n\n# A tibble: 1 × 3\n   mean    sd     n\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1  4.51  1.20    62\n\n\nThere is no function in R for the standard error of the mean, but we can calculate it from the standard deviation and sample size. The formula is:\n🛝 Add a column for the standard error which is given by \\(\\frac{s.d.}{\\sqrt{n}}\\). The function for the square root is sqrt().\n\nAnswer - don’t look until you have tried!cats |&gt; \n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass),\n            se = sd / sqrt(n))\n\n# A tibble: 1 × 4\n   mean    sd     n    se\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;\n1  4.51  1.20    62 0.152\n\n\nSo far we have only summarised the whole column. We can also summarise by groups in another column."
+    "text": "Whole column\nWe can use summarise() to get summary statistics for a whole column.\n🎬 Find the mean with:\n\ncats |&gt; \n  summarise(mean(mass))\n\n# A tibble: 1 × 1\n  `mean(mass)`\n         &lt;dbl&gt;\n1         4.51\n\n\nThe result is a dataframe (not a vector). This is one of the very useful features of dplyr and the tidyverse. Dataframes are the main data structure in R, and most functions in the tidyverse return dataframes. This makes it easy to chain together multiple operations using the pipe operator (|&gt;).\nBy default the name of the column is the function name. This is not very informative, so we can give it a more meaningful name.\n\nNaming the column\nTo name the column, we can use the name = argument in the summarise() function.\n🎬 Give a name to the new column containing the mean:\n\ncats |&gt; \n  summarise(mean = mean(mass))\n\n# A tibble: 1 × 1\n   mean\n  &lt;dbl&gt;\n1  4.51\n\n\nAnother useful feature of dataframe outputs is that it is easy to add more columns.\n\n\nAdding other summary stats\nTo add additional summary statistics, we can just add more arguments to the summarise() function. These are separated by commas.\n🎬 Find the mean, standard deviation and sample size:\n\ncats |&gt;\n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass))\n\n# A tibble: 1 × 3\n   mean    sd     n\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1  4.51  1.20    62\n\n\nThere is no function in R for the standard error of the mean, but we can calculate it from the standard deviation and sample size. The formula is:\n🛝 Add a column for the standard error which is given by \\(\\frac{s.d.}{\\sqrt{n}}\\). The function for the square root is sqrt().\n\n\nAnswer - don’t look until you have tried!\ncats |&gt; \n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass),\n            se = sd / sqrt(n))\n\n\n# A tibble: 1 × 4\n   mean    sd     n    se\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;\n1  4.51  1.20    62 0.152\n\n\nSo far we have only summarised the whole column. We can also summarise by groups in another column."
   },
   {
     "objectID": "materials/data-manipulation.html#by-groups-given-in-another-column",
@@ -530,12 +537,5 @@
     "title": "Introduction and Principles of reproducibility",
     "section": "Further reading",
     "text": "Further reading\n\nData Organization in Spreadsheets (Broman and Woo 2018)\nTen simple rules for reproducible computational research (Sandve et al. 2013)\nBest practices for scientific computing (Wilson et al. 2014)\nGood enough practices in scientific computing (Wilson et al. 2017)\nExcuse Me, Do You Have a Moment to Talk About Version Control? (Bryan 2018)\n\nPages made with R (R Core Team 2025), Quarto (Allaire et al. 2024), knitr (Xie 2024, 2015, 2014), kableExtra (Zhu 2024)"
-  },
-  {
-    "objectID": "prerequisites.html",
-    "href": "prerequisites.html",
-    "title": "Prerequisites",
-    "section": "",
-    "text": "Pre-course instructions for participants\nYou do not need any prior experience of R or RStudio.\nThere are Windows PCs at the venue and you are not required to bring your own machine. Participants from outside of York will be provided with a temporary IT account. However, if you prefer to work on your own machine please install the following prior to attending:\n\nR version 4.4.1 or higher:https://cloud.r-project.org/\nRStudio Version: 2024.12.1+563 or higher: https://posit.co/download/rstudio-desktop/\nThese R packages from CRAN: tidyverse, devtools. Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window.\nTinyTeX: Once you have installed R and RStudio, start RStudio up and go to the Terminal (lower left, behind the console) and type: quarto install tinytex and press enter."
   }
 ]
