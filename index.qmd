@@ -1,17 +1,10 @@
 ---
-title: "SETAC Student Conference 2025"
+title: "Welcome"
 toc: true
 toc-location: right
-editor: 
-  markdown: 
-    wrap: 72
 ---
 
 # Introduction to Reproducibility with R
-
-Training workshop for the SETAC 13th Young Environmental Scientists
-Meeting 2025-08-12. It is designed and delivered by Emma Rand of The
-University of York.
 
 ## Overview
 
@@ -60,3 +53,10 @@ After this workshop the successful learner will be able to:
 -   Summarise data in a single group or in multiple groups
 -   Develop highly organised analyses including well-commented scripts
     that can be understood by future you and others
+
+Emma Rand is a Professor in the Department of Biology at the University
+of York where she specialises in teaching data science and
+reproducibility, particularly to those who do not see themselves as
+programmers. She leads a UKRI funded projects called
+[Cloud-SPAN](https://cloud-span.york.ac.uk/) and the [UKRI Digital
+Research Skills Catalyst](https://digitalskillscatalyst.ac.uk/).
