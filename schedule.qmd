@@ -30,12 +30,5 @@ RStudio](materials/introduction-to-r-and-rstudio.qmd) continued
 
 ## Optional material
 
-[Data manipulation](materials/data-manipulation.qmd)
-
--   Filtering rows 1
--   Adding columns
--   Summarising
--   Writing data to a file
-
 [Computational Analysis for
 Bioscientists](https://3mmarand.github.io/comp4biosci/)
