@@ -97,7 +97,7 @@ research](images/reproducible-matrix.jpg){fig-alt="Two by Two cell matrix. Colum
 -   Excuse Me, Do You Have a Moment to Talk About Version Control?
     [@Bryan2018-hl]
 
-Pages made with R [@R-core], Quarto [@Allaire_Quarto_2024], `knitr`
+Pages made with R [@R-core], Quarto [@Allaire_Quarto_2026], `knitr`
 [@knitr1; @knitr2; @knitr3], `kableExtra` [@kableExtra]
 
 # References
