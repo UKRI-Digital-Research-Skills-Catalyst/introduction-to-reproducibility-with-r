@@ -14,18 +14,18 @@
     "text": "Introduction and Principles of reproducibility\n\nIntroduction\nPrinciples of reproducibility\n\nIntroduction to R and RStudio\n\nFinding your way round RStudio\nTyping in data and plotting it"
   },
   {
-    "objectID": "schedule.html#break-20-mins",
-    "href": "schedule.html#break-20-mins",
+    "objectID": "schedule.html#break-30-mins",
+    "href": "schedule.html#break-30-mins",
     "title": "Schedule",
-    "section": "1030 - 1050 Break 20 mins",
-    "text": "1030 - 1050 Break 20 mins"
+    "section": "1000 - 1030 Break 30 mins",
+    "text": "1000 - 1030 Break 30 mins"
   },
   {
     "objectID": "schedule.html#section-1",
     "href": "schedule.html#section-1",
     "title": "Schedule",
-    "section": "1050 – 1200",
-    "text": "1050 – 1200\nIntroduction to R and RStudio continued\n\nImporting data\nWorking directories and file paths"
+    "section": "1030 – 1200",
+    "text": "1030 – 1200\nIntroduction to R and RStudio continued\n\nImporting data\nWorking directories and file paths"
   },
   {
     "objectID": "schedule.html#optional-material",
@@ -39,21 +39,21 @@
     "href": "materials/principles-of-reproducibility.html",
     "title": "Introduction and Principles of reproducibility",
     "section": "",
-    "text": "Chosen topics are: foundational, widely applicable, and transferable conceptually.\nIt is\n\n✅ An introduction to R for those without previous experience\n✅ About using RStudio Projects and good practice for code and project documentation and organisation\n✅ An introduction to the tidyverse\n\nIt is not\n\n❌ An introduction to statistics\n❌ Magic\n\n\n\n\nAfter this workshop the successful learner will be able to:\n\nExplain the rationale for scripting analysis\nFind their way around the RStudio windows\nCreate and plot data using ggplot\nKnow how to load packages\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others"
+    "text": "It is\n\n✅ An introduction to R for those without previous experience\n✅ About using RStudio Projects and good practice for code\n✅ An introduction to the tidyverse\n\nIt is not\n\n❌ An introduction to statistics\n❌ Magic\n\n\n\n\nAfter this workshop the successful learner will be able to:\n\nExplain the rationale for scripting analysis\nFind their way around the RStudio windows\nCreate and plot data using ggplot\nKnow how to load packages\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups"
   },
   {
     "objectID": "materials/principles-of-reproducibility.html#programme-overview",
     "href": "materials/principles-of-reproducibility.html#programme-overview",
     "title": "Introduction and Principles of reproducibility",
     "section": "",
-    "text": "Chosen topics are: foundational, widely applicable, and transferable conceptually.\nIt is\n\n✅ An introduction to R for those without previous experience\n✅ About using RStudio Projects and good practice for code and project documentation and organisation\n✅ An introduction to the tidyverse\n\nIt is not\n\n❌ An introduction to statistics\n❌ Magic\n\n\n\n\nAfter this workshop the successful learner will be able to:\n\nExplain the rationale for scripting analysis\nFind their way around the RStudio windows\nCreate and plot data using ggplot\nKnow how to load packages\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others"
+    "text": "It is\n\n✅ An introduction to R for those without previous experience\n✅ About using RStudio Projects and good practice for code\n✅ An introduction to the tidyverse\n\nIt is not\n\n❌ An introduction to statistics\n❌ Magic\n\n\n\n\nAfter this workshop the successful learner will be able to:\n\nExplain the rationale for scripting analysis\nFind their way around the RStudio windows\nCreate and plot data using ggplot\nKnow how to load packages\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups"
   },
   {
     "objectID": "materials/principles-of-reproducibility.html#what-is-reproducibility",
     "href": "materials/principles-of-reproducibility.html#what-is-reproducibility",
     "title": "Introduction and Principles of reproducibility",
     "section": "What is reproducibility?",
-    "text": "What is reproducibility?\n\n\n\nThe Turing Way’s definitions of reproducible research\n\n\nReproducible: Same data + same analysis = identical results\n“…obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis. This definition is synonymous with”computational reproducibility” (National Academies of Sciences et al. 2019). This is what we are concentrating on in the Supporting Information.\n\nReplicable: Different data + same analysis = qualitatively similar results. The work is not dependent on the specificities of the data.\nRobust: Same data + different analysis = qualitatively similar or identical results. The work is not dependent on the specificities of the analysis.\nGeneralisable: Different data + different analysis = qualitatively similar results and same conclusions."
+    "text": "What is reproducibility?\nResearch reproducibility is central to the scientific method. It is achieved in a variety of ways.\nIn this context I mean “computational reproducibility” (National Academies of Sciences et al. 2019):\nReproducible: Same data + same analysis = identical results\n\n\n\nThe Turing Way’s definitions of reproducible research\n\n\n\nReplicable: Different data + same analysis = qualitatively similar results. The work is not dependent on the specificities of the data.\nRobust: Same data + different analysis = qualitatively similar or identical results. The work is not dependent on the specificities of the analysis.\nGeneralisable: Different data + different analysis = qualitatively similar results and same conclusions."
   },
   {
     "objectID": "materials/principles-of-reproducibility.html#why-does-reproducibility-matter",
@@ -68,20 +68,6 @@
     "title": "Introduction and Principles of reproducibility",
     "section": "How to achieve reproducibility",
     "text": "How to achieve reproducibility\n\nReproducibility is a continuum. Some is better than none!\nScript everything\nOrganisation: Project-oriented workflows with file and folder structure, naming things\nCode: follow a consistent style, organise into sections and scripts (be modular), Code algorithmically\nDocumentation: Readme files, code comments, metadata,\nMore advanced: version, control, continuous integration and testing"
-  },
-  {
-    "objectID": "materials/principles-of-reproducibility.html#rationale-for-scripting",
-    "href": "materials/principles-of-reproducibility.html#rationale-for-scripting",
-    "title": "Introduction and Principles of reproducibility",
-    "section": "Rationale for scripting",
-    "text": "Rationale for scripting\n\nScience is the generation of ideas, designing work to test them and reporting the results.\nWe ensure laboratory and field work is replicable, robust and generalisable by planning and recording in lab books and using standard protocols. Repeating results is still hard.\nWorkflows for computational projects, and the data analysis and reporting of other work can, and should, be 100% reproducible!\nScripting is the way to achieve this."
-  },
-  {
-    "objectID": "materials/principles-of-reproducibility.html#project-oriented-workflow",
-    "href": "materials/principles-of-reproducibility.html#project-oriented-workflow",
-    "title": "Introduction and Principles of reproducibility",
-    "section": "Project-oriented workflow",
-    "text": "Project-oriented workflow\n\nuse folders to organise your work\nyou are aiming for structured, systematic and repeatable.\ninputs and outputs should be clearly identifiable from structure and/or naming"
   },
   {
     "objectID": "materials/principles-of-reproducibility.html#further-reading",

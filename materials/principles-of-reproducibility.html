@@ -165,8 +165,6 @@ div.csl-indent {
   <li><a href="#what-is-reproducibility" id="toc-what-is-reproducibility" class="nav-link" data-scroll-target="#what-is-reproducibility">What is reproducibility?</a></li>
   <li><a href="#why-does-reproducibility-matter" id="toc-why-does-reproducibility-matter" class="nav-link" data-scroll-target="#why-does-reproducibility-matter">Why does reproducibility matter?</a></li>
   <li><a href="#how-to-achieve-reproducibility" id="toc-how-to-achieve-reproducibility" class="nav-link" data-scroll-target="#how-to-achieve-reproducibility">How to achieve reproducibility</a></li>
-  <li><a href="#rationale-for-scripting" id="toc-rationale-for-scripting" class="nav-link" data-scroll-target="#rationale-for-scripting">Rationale for scripting</a></li>
-  <li><a href="#project-oriented-workflow" id="toc-project-oriented-workflow" class="nav-link" data-scroll-target="#project-oriented-workflow">Project-oriented workflow</a></li>
   <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -207,11 +205,10 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="programme-overview">Programme Overview</h2>
 <section id="what-this-training-is-and-is-not" class="level3">
 <h3 class="anchored" data-anchor-id="what-this-training-is-and-is-not">What this training is and is not</h3>
-<p>Chosen topics are: foundational, widely applicable, and transferable conceptually.</p>
 <p>It is</p>
 <ul>
 <li>✅ An introduction to R for those without previous experience</li>
-<li>✅ About using RStudio Projects and good practice for code and project documentation and organisation</li>
+<li>✅ About using RStudio Projects and good practice for code</li>
 <li>✅ An introduction to the tidyverse</li>
 </ul>
 <p>It is not</p>
@@ -230,7 +227,6 @@ div.csl-indent {
 <li>Know how to load packages</li>
 <li>Understand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import</li>
 <li>Summarise data in a single group or in multiple groups</li>
-<li>Develop highly organised analyses including well-commented scripts that can be understood by future you and others</li>
 </ul>
 </section>
 </section>
@@ -239,14 +235,15 @@ div.csl-indent {
 <h1>Principles of reproducibility</h1>
 <section id="what-is-reproducibility" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-reproducibility">What is reproducibility?</h2>
+<p>Research reproducibility is central to the scientific method. It is achieved in a variety of ways.</p>
+<p>In this context I mean “computational reproducibility” <span class="citation" data-cites="nationalacademiesofsciences2019">(<a href="#ref-nationalacademiesofsciences2019" role="doc-biblioref">National Academies of Sciences et al. 2019</a>)</span>:</p>
+<p><em>Reproducible: Same data + same analysis = identical results</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/reproducible-matrix.jpg" class="img-fluid figure-img" alt="Two by Two cell matrix. Columns are Data, either same or different. Rows are Analysis either same or different. Each of cells contain one of the definitions for reproducibility"></p>
 <figcaption>The Turing Way’s definitions of reproducible research</figcaption>
 </figure>
 </div>
-<p><strong>Reproducible: Same data + same analysis = identical results</strong></p>
-<p><em>“…obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis. This definition is synonymous with”computational reproducibility”</em> <span class="citation" data-cites="nationalacademiesofsciences2019">(<a href="#ref-nationalacademiesofsciences2019" role="doc-biblioref">National Academies of Sciences et al. 2019</a>)</span>. This is what we are concentrating on in the Supporting Information.</p>
 <ul>
 <li><p>Replicable: Different data + same analysis = qualitatively similar results. The work is not dependent on the specificities of the data.</p></li>
 <li><p>Robust: Same data + different analysis = qualitatively similar or identical results. The work is not dependent on the specificities of the analysis.</p></li>
@@ -270,23 +267,6 @@ div.csl-indent {
 <li><p>Code: follow a consistent style, organise into sections and scripts (be modular), Code algorithmically</p></li>
 <li><p>Documentation: Readme files, code comments, metadata,</p></li>
 <li><p>More advanced: version, control, continuous integration and testing</p></li>
-</ul>
-</section>
-<section id="rationale-for-scripting" class="level2">
-<h2 class="anchored" data-anchor-id="rationale-for-scripting">Rationale for scripting</h2>
-<ul>
-<li><p>Science is the generation of ideas, designing work to test them and reporting the results.</p></li>
-<li><p>We ensure laboratory and field work is replicable, robust and generalisable by planning and recording in lab books and using standard protocols. Repeating results is still hard.</p></li>
-<li><p>Workflows for computational projects, and the data analysis and reporting of other work can, and should, be 100% reproducible!</p></li>
-<li><p>Scripting is the way to achieve this.</p></li>
-</ul>
-</section>
-<section id="project-oriented-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="project-oriented-workflow">Project-oriented workflow</h2>
-<ul>
-<li><p>use folders to organise your work</p></li>
-<li><p>you are aiming for structured, systematic and repeatable.</p></li>
-<li><p>inputs and outputs should be clearly identifiable from structure and/or naming</p></li>
 </ul>
 </section>
 <section id="further-reading" class="level2">
