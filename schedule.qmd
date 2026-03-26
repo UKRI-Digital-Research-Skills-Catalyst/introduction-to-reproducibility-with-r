@@ -4,37 +4,38 @@ toc: true
 toc-location: right
 ---
 
-## 0900 - 1030
+## 0900 - 1000
 
-[Introduction and Principles of reproducibility](materials/principles-of-reproducibility.qmd) 
+[Introduction and Principles of
+reproducibility](materials/principles-of-reproducibility.qmd)
 
--   Introduction 
--   Principles of reproducibility 
+-   Introduction
+-   Principles of reproducibility
 
-[Introduction to R and RStudio](materials/introduction-to-r-and-rstudio.qmd) 
+[Introduction to R and
+RStudio](materials/introduction-to-r-and-rstudio.qmd)
 
--  Finding your way round RStudio
--  Typing in data and plotting it
+-   Finding your way round RStudio
+-   Typing in data and plotting it
 
-## 1030 - 1050 Break 20 mins
+## 1000 - 1030 Break 30 mins
 
-## 1050 – 1200
+## 1030 – 1200
 
-[Introduction to R and RStudio](materials/introduction-to-r-and-rstudio.qmd) continued
+[Introduction to R and
+RStudio](materials/introduction-to-r-and-rstudio.qmd) continued
 
--  Importing data
--  Working directories and file paths
-
-
+-   Importing data
+-   Working directories and file paths
 
 ## Optional material
 
-
-[Data manipulation](materials/data-manipulation.qmd) 
+[Data manipulation](materials/data-manipulation.qmd)
 
 -   Filtering rows 1
 -   Adding columns
 -   Summarising
 -   Writing data to a file
 
-[Computational Analysis for Bioscientists](https://3mmarand.github.io/comp4biosci/)
+[Computational Analysis for
+Bioscientists](https://3mmarand.github.io/comp4biosci/)

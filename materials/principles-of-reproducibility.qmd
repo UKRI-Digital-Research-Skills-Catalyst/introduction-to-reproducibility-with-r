@@ -4,21 +4,16 @@ toc: true
 toc-location: right
 ---
 
-
 # Introduction
 
 ## Programme Overview
 
 ### What this training is and is not
 
-Chosen topics are: foundational, widely applicable, and transferable
-conceptually.
-
 It is
 
 -   ✅ An introduction to R for those without previous experience
--   ✅ About using RStudio Projects and good practice for code and
-    project documentation and organisation
+-   ✅ About using RStudio Projects and good practice for code
 -   ✅ An introduction to the tidyverse
 
 It is not
@@ -37,23 +32,21 @@ After this workshop the successful learner will be able to:
 -   Understand what is meant by the working directory, absolute and
     relative paths and be able to apply these concepts to data import
 -   Summarise data in a single group or in multiple groups
--   Develop highly organised analyses including well-commented scripts
-    that can be understood by future you and others
 
 # Principles of reproducibility
 
 ## What is reproducibility?
 
+Research reproducibility is central to the scientific method. It is
+achieved in a variety of ways.
+
+In this context I mean "computational reproducibility"
+[@nationalacademiesofsciences2019]:
+
+*Reproducible: Same data + same analysis = identical results*
+
 [![The Turing Way's definitions of reproducible
 research](images/reproducible-matrix.jpg){fig-alt="Two by Two cell matrix. Columns are Data, either same or different. Rows are Analysis either same or different. Each of cells contain one of the definitions for reproducibility"}](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions#rr-overview-definitions)
-
-**Reproducible: Same data + same analysis = identical results**
-
-*"...obtaining consistent results using the same input data;
-computational steps, methods, and code; and conditions of analysis. This
-definition is synonymous with"computational reproducibility"*
-[@nationalacademiesofsciences2019]. This is what we are concentrating on
-in the Supporting Information.
 
 -   Replicable: Different data + same analysis = qualitatively similar
     results. The work is not dependent on the specificities of the data.
@@ -93,29 +86,6 @@ in the Supporting Information.
 -   Documentation: Readme files, code comments, metadata,
 
 -   More advanced: version, control, continuous integration and testing
-
-## Rationale for scripting
-
--   Science is the generation of ideas, designing work to test them and
-    reporting the results.
-
--   We ensure laboratory and field work is replicable, robust and
-    generalisable by planning and recording in lab books and using
-    standard protocols. Repeating results is still hard.
-
--   Workflows for computational projects, and the data analysis and
-    reporting of other work can, and should, be 100% reproducible!
-
--   Scripting is the way to achieve this.
-
-## Project-oriented workflow
-
--   use folders to organise your work
-
--   you are aiming for structured, systematic and repeatable.
-
--   inputs and outputs should be clearly identifiable from structure
-    and/or naming
 
 ## Further reading
 
