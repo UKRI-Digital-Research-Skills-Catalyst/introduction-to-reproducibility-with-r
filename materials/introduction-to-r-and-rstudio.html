@@ -277,7 +277,11 @@ div.csl-indent {
 </li>
 </ul></section><section id="overview-of-demonstration" class="level2"><h2 class="anchored" data-anchor-id="overview-of-demonstration">Overview of demonstration</h2>
 <p>There are several ways you can <em>recap</em> the demo at a later date:</p>
-<p>🖼️ Refer to this infographic [Full size RStudio Anatomy]]https://docs.google.com/presentation/d/1cVky1y7dWmGhpZKnCagJlmNgwGmwXFf8IWm4lCUitrk/edit?usp=sharingA) <img src="images/RStudio Anatomy.svg" class="img-fluid" width="600" alt="infographic"></p>
+<p>🖼️ Refer to this infographic <a href="https://raw.githubusercontent.com/UKRI-Digital-Research-Skills-Catalyst/introduction-to-reproducibility-with-r/80b47b8f3ea698ee3855afe077a8e12f2569070b/materials/images/RStudio%20Anatomy.svg">Full size RStudio Anatomy</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/RStudio Anatomy.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="infographic"><img src="images/RStudio Anatomy.svg" class="img-fluid figure-img" width="600" alt="infographic"></a></p>
+<figcaption>infographic</figcaption></figure>
+</div>
 <p>📖 Read <a href="https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html">First Steps in RStudio</a></p>
 <p>📹 Watch</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/7oLLjkTNrjY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
@@ -329,7 +333,7 @@ div.csl-indent {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-3-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-3-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-3-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-3-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -380,7 +384,7 @@ div.csl-indent {
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-8-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-8-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-8-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-8-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -429,7 +433,22 @@ div.csl-indent {
 <li>
 <strong>Value</strong> gives the output of the command</li>
 <li>Don’t be too perturbed by not fully understanding the information</li>
-</ul></section><section id="customising-a-plot" class="level2"><h2 class="anchored" data-anchor-id="customising-a-plot">Customising a plot</h2>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Aesthetics</strong> geom_col() understands the following aesthetics. Required aesthetics are displayed in bold and defaults are displayed for optional aesthetics:</p>
+<ul>
+<li>x</li>
+<li>y</li>
+<li>alpha → NA</li>
+<li>colour → via theme()</li>
+<li>fill → via theme()</li>
+<li>group → inferred</li>
+<li>linetype → via theme()</li>
+<li>linewidth → via theme()</li>
+<li>width → 0.9</li>
+</ul>
+</blockquote>
+</section><section id="customising-a-plot" class="level2"><h2 class="anchored" data-anchor-id="customising-a-plot">Customising a plot</h2>
 <section id="bar-colour" class="level3"><h3 class="anchored" data-anchor-id="bar-colour">Bar colour</h3>
 <p>🎬 Change the fill of the bars using <code>fill</code>:</p>
 <div class="cell">
@@ -437,7 +456,7 @@ div.csl-indent {
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightblue"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-10-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-10-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-10-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-10-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -458,33 +477,22 @@ div.csl-indent {
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-11-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-11-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-11-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-11-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Note that we have taken <code>fill = "lightblue"</code> out of the <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code> and instead put <code>fill = coat</code> in the <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code>.</p>
-<p>🛝 Use the manual to put the bars next to each other. Look for the argument that will mean there is no space between the bars.</p>
-<div class="cell">
-<details class="code-fold"><summary>Answer - don’t look until you have tried!</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">freq</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightblue"</span>, width <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output-display">
-<div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-12-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-12-1.svg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div>
 <p>🛝 Use the manual to change the colour of the lines around each bar to black.</p>
 <div class="cell">
-<details class="code-fold"><summary>Answer - don’t look until you have tried!</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>,</span>
+<details class="code-fold"><summary>Answer - don’t look until you have tried!</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>,</span>
 <span>       <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">freq</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightblue"</span>, </span>
 <span>           width <span class="op">=</span> <span class="fl">1</span>, </span>
 <span>           colour <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-13-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-13-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-12-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-12-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -500,7 +508,7 @@ div.csl-indent {
 <p><code>ggplot</code> automatically extends the axes slightly. You can turn this behaviour off with the <code>expand</code> argument in <code><a href="https://ggplot2.tidyverse.org/reference/scale_discrete.html">scale_x_discrete()</a></code> and <code><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous()</a></code>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>🎬 To remove the gap between the axes and the data:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">freq</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">freq</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightblue"</span>, </span>
 <span>           width <span class="op">=</span> <span class="fl">1</span>, </span>
 <span>           colour <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span> <span class="op">+</span></span>
@@ -508,7 +516,7 @@ div.csl-indent {
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-14-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-14-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-13-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-13-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -534,7 +542,7 @@ div.csl-indent {
 </div>
 <p>🛝 Look up <code>scale_x_discrete</code> in the manual and work out how to change the axis title from “coat” to “Coat colour”. Also change the <em>y</em>-axis title.</p>
 <div class="cell">
-<details class="code-fold"><summary>Answer - don’t look until you have tried!</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">freq</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<details class="code-fold"><summary>Answer - don’t look until you have tried!</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">freq</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightblue"</span>, </span>
 <span>           width <span class="op">=</span> <span class="fl">1</span>, </span>
 <span>           colour <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span> <span class="op">+</span></span>
@@ -544,14 +552,14 @@ div.csl-indent {
 <span>                     name <span class="op">=</span> <span class="st">"Number of cats"</span><span class="op">)</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-15-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-15-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-14-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-14-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>🎬 I would prefer to see the <em>y</em>-axis extend a little beyond the data and we can change the axis “limits” in the <code><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous()</a></code></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">freq</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">freq</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightblue"</span>, </span>
 <span>           width <span class="op">=</span> <span class="fl">1</span>, </span>
 <span>           colour <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span> <span class="op">+</span></span>
@@ -562,7 +570,7 @@ div.csl-indent {
 <span>                     limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span><span class="op">)</span><span class="op">)</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-16-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-16-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-15-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-15-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -571,7 +579,7 @@ div.csl-indent {
 <p>The grey grid background is useful for examining plots on a screen but for a report or publication you will want a more scientific style. Every aspect of the “theme” of a plot - the non-data elements such as fonts, background colours, axis line colours etc - can be controlled individually<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> but there are some handy built in themes that apply several changes at once. One of these is <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic()</a></code></p>
 <p>🎬 Add <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic()</a></code> to the plot:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">freq</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">coat_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">freq</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">1</span>, </span>
 <span>           colour <span class="op">=</span> <span class="st">"black"</span>,</span>
 <span>           fill <span class="op">=</span> <span class="st">"lightblue"</span><span class="op">)</span> <span class="op">+</span></span>
@@ -583,7 +591,7 @@ div.csl-indent {
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-17-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-17-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-16-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-16-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -613,7 +621,7 @@ div.csl-indent {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-18-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-18-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-17-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-17-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -629,43 +637,43 @@ div.csl-indent {
 <p>CSV files can be read read in with core <strong><code>tidyverse</code></strong> <span class="citation" data-cites="tidyverse">(<a href="#ref-tidyverse" role="doc-biblioref">Wickham et al. 2019</a>)</span> functions.</p>
 <p>🎬 Load the packages</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>A <code>.csv.</code> extension suggests this is plain text file with comma separated columns. However, before we attempt to read it it, we should take a look at it. We can do this from RStudio</p>
 <p>🎬 Go to the Files pane (bottom right), click on the <code>cat-coats.csv</code> file and choose View File<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <p>🎬 Read in the csv file with:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"cat-coats.csv"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"cat-coats.csv"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The data from the file will be read into a dataframe called <code>cats</code> and you will be able to see it in the Environment.</p>
 </section><section id="reading-in-data-from-a-different-folder" class="level3"><h3 class="anchored" data-anchor-id="reading-in-data-from-a-different-folder">Reading in data from a different folder</h3>
 <p>To help you understand relative file paths, we will now move the data file.</p>
 <p>🎬 First remove the dataframes you just created to make it easier to see whether you can successfully read in the files from a different place:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span><span class="op">(</span><span class="va">cats</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span><span class="op">(</span><span class="va">cats</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>🎬 Now make a new folder called <code>data-raw</code>. You can do this on the Files Pane by clicking New Folder and typing into the box that appears.</p>
 <p>🎬 Check the boxes next to the file names and choose More | Move… and select the <code>data-raw</code> folder.</p>
 <p>The file will move. To import data from a file in the <code>data-raw</code> folder, you need to give the <em>relative path</em> to the file from the working directory. The working directory is the Project folder, <code>cats-2</code> so the relative path is <code>data-raw/cat-coats.csv</code></p>
 <p>🎬 Import the <code>cat-coats.csv</code> data like this:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data-raw/cat-coats.csv"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data-raw/cat-coats.csv"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section><section id="creating-a-boxplot" class="level2"><h2 class="anchored" data-anchor-id="creating-a-boxplot">Creating a boxplot</h2>
 <p>🎬 Create a simple barplot using <code>ggplot</code> like this:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">cats</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">mass</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">cats</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">mass</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-23-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-23-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-22-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-22-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>🛝 Can you format the boxplot as shown above?</p>
 <div class="cell">
-<details class="code-fold"><summary>Answer - don’t look until you have tried!</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">cats</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">mass</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<details class="code-fold"><summary>Answer - don’t look until you have tried!</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">cats</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">coat</span>, y <span class="op">=</span> <span class="va">mass</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Mass (g)"</span>, </span>
 <span>                     limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">10</span><span class="op">)</span>, </span>
@@ -674,7 +682,7 @@ div.csl-indent {
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-24-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-24-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-23-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-23-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
