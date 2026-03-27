@@ -1,1 +1,0 @@
-Sitemap: https://UKRI-Digital-Research-Skills-Catalyst.github.io/introduction-to-reproducibility-with-r/sitemap.xml
