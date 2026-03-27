@@ -31,8 +31,8 @@ color:
   background: york-white
   foreground: york-navy
   primary: york-white
-  secondary: york-pink
-  tertiary: york-teal
+  secondary: york-teal
+  tertiary: york-purple
 
 typography:
   fonts:
