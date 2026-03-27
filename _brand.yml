@@ -32,7 +32,7 @@ color:
   foreground: york-navy
   primary: york-white
   secondary: york-teal
-  tertiary: york-purple
+  tertiary: york-blue
 
 typography:
   fonts:
