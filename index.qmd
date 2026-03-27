@@ -54,9 +54,13 @@ After this workshop the successful learner will be able to:
 -   Develop highly organised analyses including well-commented scripts
     that can be understood by future you and others
 
+## About the instructor
+
 Emma Rand is a Professor in the Department of Biology at the University
 of York where she specialises in teaching data science and
 reproducibility, particularly to those who do not see themselves as
-programmers. She leads a UKRI funded projects called
+programmers. She leads UKRI funded projects called
 [Cloud-SPAN](https://cloud-span.york.ac.uk/) and the [UKRI Digital
-Research Skills Catalyst](https://digitalskillscatalyst.ac.uk/).
+Research Skills Catalyst](https://digitalskillscatalyst.ac.uk/) that
+train the research workforce in digital research skills using Findable,
+Accessible, Interoperable and Reusable (FAIR) materials.

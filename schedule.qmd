@@ -28,6 +28,11 @@ RStudio](materials/introduction-to-r-and-rstudio.qmd) continued
 -   Importing data
 -   Working directories and file paths
 
+## 1400 – 1500
+
+[Reproduciblereports with
+quarto](materials/reproducible-reports-with-quarto.qmd)
+
 ## Optional material
 
 [Computational Analysis for

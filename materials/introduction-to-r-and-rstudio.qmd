@@ -41,8 +41,9 @@ library(tidyverse)
 
 There are several ways you can *recap* the demo at a later date:
 
-🖼️ Refer to this infographic \[Full size RStudio
-Anatomy\]\]https://docs.google.com/presentation/d/1cVky1y7dWmGhpZKnCagJlmNgwGmwXFf8IWm4lCUitrk/edit?usp=sharingA)
+🖼️ Refer to this infographic [Full size RStudio
+Anatomy](https://raw.githubusercontent.com/UKRI-Digital-Research-Skills-Catalyst/introduction-to-reproducibility-with-r/80b47b8f3ea698ee3855afe077a8e12f2569070b/materials/images/RStudio%20Anatomy.svg)
+
 ![infographic](images/RStudio%20Anatomy.svg){width="600"}
 
 📖 Read [First Steps in
@@ -93,7 +94,7 @@ You will create a figure like this:
 coat_data <- data.frame(coat, freq)
 ggplot(data = coat_data, 
        aes(x = coat, y = freq)) +
-  geom_col(colour = "black", fill = "lightblue", width = 1) +
+  geom_col(colour = "black", fill = "lightblue") +
   scale_x_discrete(name = "Coat colour",
                    expand = c(0, 0)) +
   scale_y_continuous(name = "Number of cats",
@@ -227,6 +228,20 @@ The manual page has several sections.
 -   **Value** gives the output of the command
 -   Don't be too perturbed by not fully understanding the information
 
+> **Aesthetics** geom_col() understands the following aesthetics.
+> Required aesthetics are displayed in bold and defaults are displayed
+> for optional aesthetics:
+>
+> -   x
+> -   y
+> -   alpha → NA
+> -   colour → via theme()
+> -   fill → via theme()
+> -   group → inferred
+> -   linetype → via theme()
+> -   linewidth → via theme()
+> -   width → 0.9
+
 ## Customising a plot
 
 ### Bar colour
@@ -273,17 +288,6 @@ ggplot(data = coat_data, aes(x = coat, y = freq, fill = coat)) +
 
 Note that we have taken `fill = "lightblue"` out of the `geom_col()` and
 instead put `fill = coat` in the `aes()`.
-
-🛝 Use the manual to put the bars next to each other. Look for the
-argument that will mean there is no space between the bars.
-
-```{r}
-#| code-fold: true
-#| code-summary: "Answer - don't look until you have tried!"
-
-ggplot(data = coat_data, aes(x = coat, y = freq)) +
-  geom_col(fill = "lightblue", width = 1)
-```
 
 🛝 Use the manual to change the colour of the lines around each bar to
 black.
