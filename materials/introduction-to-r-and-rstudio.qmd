@@ -105,11 +105,11 @@ ggplot(data = coat_data,
 
 ## Getting set up
 
--   🎬 In RStudio do File \| New project \| New directory Be purposeful
-    about where you create it and name it. I suggest `cats-1`
+🎬 In RStudio do File \| New project \| New directory. Be purposeful
+about where you create it and name it. I suggest `cats-1`
 
--   🎬 Make a new script and save it as `type-data-and-plot.R` to carry
-    out the rest of the work.
+🎬 Make a new script and save it as `type-data-and-plot.R` to carry out
+the rest of the work.
 
 ## Creating the data
 
@@ -299,7 +299,6 @@ black.
 ggplot(data = coat_data,
        aes(x = coat, y = freq)) +
   geom_col(fill = "lightblue", 
-           width = 1, 
            colour = "black")
 ```
 
@@ -322,7 +321,6 @@ behaviour off with the `expand` argument in `scale_x_discrete()` and
 ```{r}
 ggplot(data = coat_data, aes(x = coat, y = freq)) +
   geom_col(fill = "lightblue", 
-           width = 1, 
            colour = "black") +
   scale_x_discrete(expand = c(0, 0)) + 
   scale_y_continuous(expand = c(0, 0)) 
@@ -349,7 +347,6 @@ title.
 
 ggplot(data = coat_data, aes(x = coat, y = freq)) +
   geom_col(fill = "lightblue", 
-           width = 1, 
            colour = "black") +
   scale_x_discrete(expand = c(0, 0),
                    name = "Coat colour") + 
@@ -365,7 +362,6 @@ and we can change the axis "limits" in the `scale_y_continuous()`
 ```{r}
 ggplot(data = coat_data, aes(x = coat, y = freq)) +
   geom_col(fill = "lightblue", 
-           width = 1, 
            colour = "black") +
   scale_x_discrete(expand = c(0, 0),
                    name = "Coat colour") + 
@@ -392,8 +388,7 @@ several changes at once. One of these is `theme_classic()`
 
 ```{r}
 ggplot(data = coat_data, aes(x = coat, y = freq)) +
-  geom_col(width = 1, 
-           colour = "black",
+  geom_col(colour = "black",
            fill = "lightblue") +
   scale_x_discrete(expand = c(0, 0),
                    name = "Coat colour") + 
