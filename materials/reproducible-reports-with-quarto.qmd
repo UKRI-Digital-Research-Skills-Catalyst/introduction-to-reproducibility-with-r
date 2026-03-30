@@ -6,7 +6,7 @@ toc-location: right
 
 # Introduction
 
-This workshop introduces you to Quarto [@Allaire_Quarto_2024] for
+This workshop introduces you to Quarto [@Allaire_Quarto_2026] for
 creating reproducible reports.
 
 🎬 An instruction to do something
